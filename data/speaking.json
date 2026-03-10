@@ -1,0 +1,71 @@
+{
+  "talks": [
+    {
+      "date": "March 2026",
+      "org": "NICAR",
+      "title": "Clustering and mapping text data",
+      "titleUrl": "https://github.com/TowCenter/llm-text-embeddings",
+      "desc": "Hands-on session using large language model text embeddings to cluster and map NICAR conference sessions, and how reporters can adapt the workflow for their own text datasets.",
+      "links": [
+        { "label": "Slides", "url": "assets/nicar-2026-semantic-maps-tipsheet.pdf" },
+        { "label": "GitHub", "url": "https://github.com/TowCenter/llm-text-embeddings" }
+      ]
+    },
+    {
+      "date": "Feb 2026",
+      "org": "Tow Center for Digital Journalism",
+      "title": "Search and news",
+      "titleUrl": "https://www.youtube.com/watch?v=MsH_5rzTDb8",
+      "desc": "Panel on how AI search and chatbots are changing how people find news, what that means for traffic and attribution, and how journalists should respond.",
+      "links": [
+        { "label": "Session write-up", "url": "https://www.cjr.org/tow_center/ai-versus-accuracy-willing-trade-off-northwester-gain-cnti-studies.php" }
+      ],
+      "spotlight": true,
+      "videoEmbed": "MsH_5rzTDb8"
+    },
+    {
+      "date": "Sept 2025",
+      "org": "Online News Association (ONA)",
+      "title": "Navigating the shift to generative search",
+      "titleUrl": "https://ona25.journalists.org/schedule/",
+      "desc": "With the rise of AI-driven search tools, news publishers face fundamentally changed models of distribution, attribution, and engagement. This session with Columbia's Tow Center shares research on critical vulnerabilities in generative search technologies and discusses how publishers and journalists can monitor and control how their content is being used.",
+      "links": [
+        { "label": "Slides", "url": "assets/ona-2025-generative-search-tipsheet.pdf" }
+      ]
+    },
+    {
+      "date": "May 2025",
+      "org": "SPARC",
+      "title": "OA, Attribution, and Addressing Faculty AI Concerns",
+      "titleUrl": "https://sparcopen.org/our-work/webinar-recordings/",
+      "desc": "Webcast for librarians and faculty on how open access and attribution work in the age of AI tools, and how to address common concerns about reuse of scholarship.",
+      "links": []
+    },
+    {
+      "date": "May 2025",
+      "org": "American Association for Public Opinion Research (AAPOR)",
+      "title": "Can LLMs Extract Transparency Metrics from Text Descriptions of Polling Methods",
+      "titleUrl": "https://aapor.confex.com/aapor/2025/meetingapp.cgi/Paper/4079",
+      "desc": "Research presentation on whether large language models can reliably extract methodological transparency metrics from poll descriptions at scale.",
+      "links": [
+        { "label": "Slides", "url": "assets/aapor-2025-slides.pdf" }
+      ]
+    },
+    {
+      "date": "Oct 2024",
+      "org": "Computation + Journalism Symposium",
+      "title": "Using Large Language Models to Help Newsrooms Aggregate Polls For the 2024 Election",
+      "titleUrl": "https://idi.provost.northeastern.edu/event-directory/the-2024-computation-journalism-symposium-panels/",
+      "desc": "Talk on PollFinder.ai, a tool that uses LLMs to help newsrooms find, standardize, and track election polling across outlets.",
+      "links": []
+    },
+    {
+      "date": "Sept 2024",
+      "org": "Tow Center for Digital Journalism",
+      "title": "Editing AI-powered Journalism",
+      "titleUrl": "https://www.eventbrite.com/e/ai-and-the-newsroom-navigating-whats-next-tickets-1008567040167",
+      "desc": "Panel discussion with editors on how AI is being used in newsrooms today, what's worked, and what they've learned about editing AI-assisted journalism.",
+      "links": []
+    }
+  ]
+}

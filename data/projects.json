@@ -1,0 +1,60 @@
+{
+  "selectedWork": [
+    {
+      "url": "https://www.cjr.org/tow_center/why-ai-models-are-bad-at-verifying-photos.php",
+      "image": "assets/SVG/Asset 1.svg",
+      "imageAlt": "",
+      "title": "Why AI models are bad at verifying photos",
+      "description": "Testing how leading AI image models perform when asked to verify the authenticity of photos.",
+      "tags": ["AI", "verification", "images"]
+    },
+    {
+      "url": "https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php",
+      "image": "assets/SVG/Asset 2.svg",
+      "imageAlt": "Comparison charts of eight AI search engines' citation performance",
+      "title": "AI search has a citation problem",
+      "description": "Comparing eight AI search engines and their ability to cite news sources.",
+      "more": "We tested eight AI search tools—including ChatGPT Search, Perplexity, Gemini, and Copilot—with 200 real news excerpts. In over 60% of cases they failed to return the correct article, title, or URL. Many gave confident wrong answers or broken links. The report has been covered by Nieman Lab, Ars Technica, Axios, and El País.",
+      "tags": ["AI", "search", "citations"],
+      "wide": true,
+      "spotlight": true
+    },
+    {
+      "url": "https://www.cjr.org/analysis/how-ai-browsers-sneak-past-blockers-and-paywalls.php",
+      "image": null,
+      "title": "How AI browsers sneak past blockers and paywalls",
+      "description": "How AI-powered browsers can bypass paywalls and ad blockers and what publishers are doing.",
+      "tags": ["AI", "paywalls", "browsers"]
+    },
+    {
+      "url": "https://www.cjr.org/tow_center/ai-chatbots-can-search-the-web-so-why-dont-they.php",
+      "image": "assets/thumb-chatbots.png",
+      "imageAlt": "Chatbot correcting a false premise in a user query",
+      "title": "AI chatbots can search the web – so why don't they?",
+      "description": "Why major chatbots often avoid live web search and what that means for news.",
+      "tags": ["AI", "search", "chatbots"]
+    },
+    {
+      "url": "https://www.cjr.org/tow_center/automating-the-boring-stuff-with-pollfinder-ai.php",
+      "image": "assets/thumb-pollfinder.png",
+      "imageAlt": "PollFinder.ai",
+      "title": "Automating the boring stuff with PollFinder.ai",
+      "description": "How PollFinder.ai helps automate the tedious work of finding and tracking polls for newsrooms.",
+      "tags": ["AI", "polls", "tools"]
+    }
+  ],
+  "interactives": [
+    {
+      "url": "https://tow.cjr.org/ai-deals-lawsuits/",
+      "title": "AI deals and disputes tracker",
+      "description": "A running tracker of deals, lawsuits, and disputes involving AI and news organizations.",
+      "tags": ["tracker", "AI", "deals"]
+    },
+    {
+      "url": "https://tow.cjr.org/platform-timeline/",
+      "title": "Platforms and publishers timeline",
+      "description": "A timeline of key moments between platforms and publishers.",
+      "tags": ["tracker", "platforms", "publishers"]
+    }
+  ]
+}

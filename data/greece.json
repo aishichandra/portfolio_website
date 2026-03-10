@@ -1,0 +1,14 @@
+{
+  "images": [
+    { "src": "assets/playground/greece/athlete.png", "alt": "Athlete" },
+    { "src": "assets/playground/greece/winner.png", "alt": "Winner" },
+    { "src": "assets/playground/greece/guide.png", "alt": "Guide" },
+    { "src": "assets/playground/greece/runner.png", "alt": "Runner" },
+    { "src": "assets/playground/greece/mother.png", "alt": "Mother" },
+    { "src": "assets/playground/greece/guard.png", "alt": "Guard" },
+    { "src": "assets/playground/greece/shopkeeper.png", "alt": "Shopkeeper" },
+    { "src": "assets/playground/greece/priest.png", "alt": "Priest" },
+    { "src": "assets/playground/greece/instrument.png", "alt": "Instrument", "small": true },
+    { "src": "assets/playground/greece/flowers.png", "alt": "Flowers" }
+  ]
+}
