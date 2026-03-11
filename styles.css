@@ -415,6 +415,36 @@ a:hover {
   }
 }
 
+/* Reserve space for JS-injected content to reduce CLS */
+#selected-work-grid {
+  min-height: 820px;
+}
+
+#interactives-grid {
+  min-height: 200px;
+}
+
+#speaking-content {
+  min-height: 280px;
+}
+
+@media (max-width: 800px) {
+  #selected-work-grid {
+    min-height: 820px;
+  }
+}
+
+@media (max-width: 500px) {
+  #selected-work-grid,
+  #interactives-grid {
+    min-height: 0;
+  }
+
+  #speaking-content {
+    min-height: 200px;
+  }
+}
+
 .section.interactives .grid {
   grid-auto-rows: minmax(160px, auto);
 }

@@ -1,9 +1,10 @@
 /**
  * Simple CMS: load projects from data/projects.json and render Selected work + Interactives grids.
  * To add or edit projects, edit data/projects.json.
+ * Bump CACHE_VERSION when you change data/*.json so browsers fetch fresh data.
  */
-
 (function () {
+  var CACHE_VERSION = '1';
   function escapeHtml(text) {
     if (!text) return '';
     var div = document.createElement('div');
@@ -168,13 +169,13 @@
 
     if (!selectedEl && !interactivesEl && !speakingEl) return;
 
-    var projectsPromise = fetch('data/projects.json').then(function (r) {
+    var projectsPromise = fetch('data/projects.json?v=' + CACHE_VERSION).then(function (r) {
       if (!r.ok) throw new Error(r.status);
       return r.json();
     });
 
     var speakingPromise = speakingEl
-      ? fetch('data/speaking.json').then(function (r) {
+      ? fetch('data/speaking.json?v=' + CACHE_VERSION).then(function (r) {
           if (!r.ok) throw new Error(r.status);
           return r.json();
         })

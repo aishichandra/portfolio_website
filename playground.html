@@ -6,7 +6,8 @@
   <title>Playground — Aisvarya Chandrasekar</title>
   <meta name="description" content="An assortment of projects from the past and things I'm trying out.">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="styles.css?v=1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css?v=1"></noscript>
 </head>
 <body class="play-page">
   <canvas class="doodle-canvas" id="doodle-canvas" aria-hidden="true"></canvas>

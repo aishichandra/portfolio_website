@@ -6,9 +6,13 @@
   <title>Aisvarya Chandrasekar</title>
   <meta name="description" content="Aisvarya Chandrasekar is a computational journalist at the Tow Center for Digital Journalism, studying AI tools in journalism. PollFinder.ai, Tow Center, Columbia Journalism Review.">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="preload" href="data/projects.json" as="fetch">
-  <link rel="preload" href="data/speaking.json" as="fetch">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="data/projects.json?v=1" as="fetch">
+  <link rel="preload" href="data/speaking.json?v=1" as="fetch">
+  <link rel="preload" href="fonts/HelveticaNeueRoman.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/thumb-ai-verify.png" as="image">
+  <link rel="preload" href="assets/SVG/Asset%202.svg" as="image">
+  <link rel="preload" href="styles.css?v=1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css?v=1"></noscript>
 </head>
 <body class="home-page">
   <div class="page">
@@ -70,7 +74,7 @@
           <div class="grid-item">
             <div class="grid-block">
               <a href="https://aishichandra.notion.site/Balancing-the-Books-beb009520f3041eba2219f8cfee4041c?pvs=4" target="_blank" rel="noopener" class="grid-thumb">
-                <img src="assets/SVG/Asset 4.svg" alt="Balancing the books – equitable library funding in Ohio">
+                <img src="assets/SVG/Asset%204.svg" alt="Balancing the books – equitable library funding in Ohio" width="400" height="250">
               </a>
               <div class="grid-block-text">
                 <h3 class="grid-item-title">
@@ -93,7 +97,7 @@
           <div class="grid-item">
             <div class="grid-block">
               <a class="grid-thumb" href="https://aishichandra.github.io/Slang_NYT_XWord/" target="_blank" rel="noopener">
-                <img src="assets/SVG/Asset 3.svg" alt="Slang in the NYT crossword">
+                <img src="assets/SVG/Asset%203.svg" alt="Slang in the NYT crossword" width="400" height="250">
               </a>
               <div class="grid-block-text">
                 <h3 class="grid-item-title">
@@ -134,6 +138,6 @@
       <p class="footer-copy">© 2026</p>
     </footer>
   </div>
-  <script src="scripts/projects.js" defer></script>
+  <script src="scripts/projects.js?v=1" defer></script>
 </body>
 </html>
