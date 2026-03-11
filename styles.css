@@ -48,7 +48,7 @@ body {
 .play-page a,
 .play-page button,
 .play-page [role="button"] {
-  cursor: url("assets/cursor-crayon.svg") 3 29, pointer;
+  cursor: pointer;
 }
 
 .doodle-canvas {
