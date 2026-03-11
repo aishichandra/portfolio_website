@@ -27,13 +27,15 @@
 
   function renderSelectedWork(items) {
     var html = '';
-    items.forEach(function (item) {
+    items.forEach(function (item, i) {
       var wideClass = item.wide ? ' grid-item--wide grid-item--spotlight' : '';
       var thumb = '';
+      var imgAttrs = ' loading="lazy" decoding="async"';
+      if (i === 0 && item.image) imgAttrs = ' fetchpriority="high" decoding="async"';
       if (item.image) {
         thumb =
           '<a class="grid-thumb" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' +
-            '<img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.imageAlt || '') + '">' +
+            '<img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.imageAlt || '') + '"' + imgAttrs + '>' +
           '</a>';
       } else {
         thumb =
@@ -147,32 +149,16 @@
     return html;
   }
 
-  function loadSpeaking(containerEl) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data/speaking.json', true);
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState !== 4) return;
-      if (xhr.status !== 200) {
-        if (containerEl) containerEl.innerHTML = '<p>Could not load speaking data. Check <code>data/speaking.json</code>.</p>';
-        return;
-      }
-      try {
-        var data = JSON.parse(xhr.responseText);
-        if (containerEl && data.talks) {
-          containerEl.innerHTML = renderSpeaking(data.talks);
-          var seeLess = containerEl.querySelector('.talk-see-less');
-          if (seeLess) {
-            seeLess.addEventListener('click', function () {
-              var details = this.closest('details');
-              if (details) details.removeAttribute('open');
-            });
-          }
-        }
-      } catch (e) {
-        if (containerEl) containerEl.innerHTML = '<p>Invalid speaking data.</p>';
-      }
-    };
-    xhr.send();
+  function applySpeaking(containerEl, data) {
+    if (!containerEl || !data.talks) return;
+    containerEl.innerHTML = renderSpeaking(data.talks);
+    var seeLess = containerEl.querySelector('.talk-see-less');
+    if (seeLess) {
+      seeLess.addEventListener('click', function () {
+        var details = this.closest('details');
+        if (details) details.removeAttribute('open');
+      });
+    }
   }
 
   function loadProjects() {
@@ -182,16 +168,20 @@
 
     if (!selectedEl && !interactivesEl && !speakingEl) return;
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data/projects.json', true);
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState !== 4) return;
-      if (xhr.status !== 200) {
-        if (selectedEl) selectedEl.innerHTML = '<p>Could not load projects. Check <code>data/projects.json</code>.</p>';
-        return;
-      }
-      try {
-        var data = JSON.parse(xhr.responseText);
+    var projectsPromise = fetch('data/projects.json').then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    });
+
+    var speakingPromise = speakingEl
+      ? fetch('data/speaking.json').then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          return r.json();
+        })
+      : Promise.resolve(null);
+
+    projectsPromise
+      .then(function (data) {
         if (selectedEl && data.selectedWork) {
           selectedEl.innerHTML = renderSelectedWork(data.selectedWork);
           selectedEl.removeAttribute('aria-busy');
@@ -199,14 +189,21 @@
         if (interactivesEl && data.interactives) {
           interactivesEl.innerHTML = renderInteractives(data.interactives);
         }
-      } catch (e) {
-        if (selectedEl) selectedEl.innerHTML = '<p>Invalid projects data.</p>';
-        if (selectedEl) selectedEl.removeAttribute('aria-busy');
-      }
-    };
-    xhr.send();
+      })
+      .catch(function () {
+        if (selectedEl) {
+          selectedEl.innerHTML = '<p>Could not load projects. Check <code>data/projects.json</code>.</p>';
+          selectedEl.removeAttribute('aria-busy');
+        }
+      });
 
-    if (speakingEl) loadSpeaking(speakingEl);
+    speakingPromise
+      .then(function (data) {
+        if (data) applySpeaking(speakingEl, data);
+      })
+      .catch(function () {
+        if (speakingEl) speakingEl.innerHTML = '<p>Could not load speaking data. Check <code>data/speaking.json</code>.</p>';
+      });
   }
 
   if (document.readyState === 'loading') {
