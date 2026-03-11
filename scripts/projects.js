@@ -124,7 +124,7 @@
           '<div class="talk-date-col">' + escapeHtml(t.date) + '</div>' +
           mainBlock +
           '<div class="talk-spotlight-video"><div class="video-embed">' +
-          '<iframe src="https://www.youtube.com/embed/' + escapeHtml(t.videoEmbed) + '" title="' + escapeHtml(t.title) + '" frameborder="0" allowfullscreen></iframe>' +
+          '<iframe src="https://www.youtube.com/embed/' + escapeHtml(t.videoEmbed) + '" title="' + escapeHtml(t.title) + '" frameborder="0" allowfullscreen loading="lazy"></iframe>' +
           '</div></div></div>';
       } else if (!firstDone) {
         html += '<div class="talk-item"><div class="talk-date-col">' + escapeHtml(t.date) + '</div>' + mainBlock + '</div>';
@@ -183,8 +183,11 @@
 
     projectsPromise
       .then(function (data) {
-        if (selectedEl && data.selectedWork) {
-          selectedEl.innerHTML = renderSelectedWork(data.selectedWork);
+        if (selectedEl && data.selectedWork && data.selectedWork.length > 0) {
+          var rest = data.selectedWork.slice(1);
+          if (rest.length > 0) {
+            selectedEl.insertAdjacentHTML('beforeend', renderSelectedWork(rest));
+          }
           selectedEl.removeAttribute('aria-busy');
         }
         if (interactivesEl && data.interactives) {

@@ -49,7 +49,23 @@
           <h2 class="section-title">Selected work</h2>
           <p class="section-kicker"><a href="https://www.cjr.org/author/aisvarya-chandrasekar" target="_blank" rel="noopener">Read more →</a></p>
         </header>
-        <div id="selected-work-grid" class="grid" aria-busy="true" aria-live="polite"><!-- Filled by scripts/projects.js from data/projects.json --></div>
+        <div id="selected-work-grid" class="grid" aria-busy="true" aria-live="polite">
+          <!-- First card in HTML for fast LCP on mobile (rest filled by scripts/projects.js) -->
+          <div class="grid-item">
+            <div class="grid-block">
+              <a class="grid-thumb" href="https://www.cjr.org/tow_center/why-ai-models-are-bad-at-verifying-photos.php" target="_blank" rel="noopener">
+                <img src="assets/thumb-ai-verify.png" alt="Rabbit-duck illusion diagram on a black background" fetchpriority="high" decoding="async" width="400" height="250">
+              </a>
+              <div class="grid-block-text">
+                <h3 class="grid-item-title">
+                  <a href="https://www.cjr.org/tow_center/why-ai-models-are-bad-at-verifying-photos.php" target="_blank" rel="noopener">Why AI Models Are Bad at Verifying Photos</a>
+                </h3>
+                <p class="grid-item-desc">Testing how leading AI image models perform when asked to verify the authenticity of photos.</p>
+                <p class="grid-item-tags"><span class="tag">experiment design</span> <span class="tag">data analysis</span> <span class="tag">writing</span> <span class="tag">graphics</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="section interactives">
