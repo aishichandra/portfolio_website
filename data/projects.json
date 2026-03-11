@@ -5,7 +5,7 @@
       "image": "assets/thumb-ai-verify.png",
       "imageAlt": "Rabbit-duck illusion diagram on a black background",
       "title": "Why AI Models Are Bad at Verifying Photos",
-      "description": "Testing how leading AI image models perform when asked to verify the authenticity of photos.",
+      "description": "We tested how leading AI image models perform when asked to verify the authenticity of photos.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"]
     },
     {
@@ -13,8 +13,8 @@
       "image": "assets/SVG/Asset 2.svg",
       "imageAlt": "Comparison charts of eight AI search engines' citation performance",
       "title": "AI Search Has a Citation Problem",
-      "descriptionHtml": "Comparing eight AI search engines and their ability to cite news sources. This builds on our <a href=\"https://www.cjr.org/tow_center/how-chatgpt-misrepresents-publisher-content.php\" target=\"_blank\" rel=\"noopener\">previous report</a>, which looks at how ChatGPT performs at citing news sources.",
-      "moreHtml": "This report has been covered by <a href=\"https://www.niemanlab.org/2025/03/ai-search-engines-fail-to-produce-accurate-citations-in-over-60-of-tests-according-to-new-tow-center-study/\" target=\"_blank\" rel=\"noopener\">Nieman Lab</a>, <a href=\"https://arstechnica.com/ai/2025/03/ai-search-engines-give-incorrect-answers-at-an-alarming-60-rate-study-says/\" target=\"_blank\" rel=\"noopener\">Ars Technica</a>, <a href=\"https://www.axios.com/newsletters/axios-login-7b9e5139-d1f2-4fcb-84ff-9002097f5489.html?chunk=0\" target=\"_blank\" rel=\"noopener\">Axios</a>, <a href=\"https://elpais.com/proyecto-tendencias/2025-04-25/citas-falsas-y-respuestas-confiadamente-incorrectas-los-chatbots-son-incapaces-de-atribuir-las-informaciones.html\" target=\"_blank\" rel=\"noopener\">El País</a>, among others.",
+      "descriptionHtml": "We tested eight AI search tools on their ability to cite news sources accurately. This builds on our <a href=\"https://www.cjr.org/tow_center/how-chatgpt-misrepresents-publisher-content.php\" target=\"_blank\" rel=\"noopener\">previous study</a>, which examined how ChatGPT cites news sources.",
+      "moreHtml": "This report has been covered by <a href=\"https://www.niemanlab.org/2025/03/ai-search-engines-fail-to-produce-accurate-citations-in-over-60-of-tests-according-to-new-tow-center-study/\" target=\"_blank\" rel=\"noopener\">Nieman Lab</a>, <a href=\"https://arstechnica.com/ai/2025/03/ai-search-engines-give-incorrect-answers-at-an-alarming-60-rate-study-says/\" target=\"_blank\" rel=\"noopener\">Ars Technica</a>, <a href=\"https://www.axios.com/newsletters/axios-login-7b9e5139-d1f2-4fcb-84ff-9002097f5489.html?chunk=0\" target=\"_blank\" rel=\"noopener\">Axios</a>, <a href=\"https://elpais.com/proyecto-tendencias/2025-04-25/citas-falsas-y-respuestas-confiadamente-incorrectas-los-chatbots-son-incapaces-de-atribuir-las-informaciones.html\" target=\"_blank\" rel=\"noopener\">El País</a>, and others.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"],
       "wide": true,
       "spotlight": true
@@ -24,15 +24,13 @@
       "image": "assets/thumb-ai-browsers.png",
       "imageAlt": "ChatGPT Atlas logo on a phone screen",
       "title": "How AI Browsers Sneak Past Blockers and Paywalls",
-      "descriptionHtml": "How AI-powered browsers can bypass paywalls and ad blockers and what publishers are doing. Covered by <a href=\"https://gizmodo.com/chatgpts-browser-bot-seems-to-avoid-new-york-times-links-like-a-rat-who-got-electrocuted-2000680444\" target=\"_blank\" rel=\"noopener\">Gizmodo</a>.",
-      "tags": ["writing"]
-    },
-    {
+      "descriptionHtml": "Agents mimic standard Chrome sessions, making them indistinguishable from regular human traffic and invisible to crawler-blocking tools. This report was covered by <a href=\"https://gizmodo.com/chatgpts-browser-bot-seems-to-avoid-new-york-times-links-like-a-rat-who-got-electrocuted-2000680444\" target=\"_blank\" rel=\"noopener\">Gizmodo</a>, <a href=\"https://mashable.com/article/some-ai-browsers-can-bypass-paywalls\" target=\"_blank\" rel=\"noopener\">Mashable</a>, <a href=\"https://futurism.com/artificial-intelligence/openai-browser-avoids-web-lawsuit\" target=\"_blank\" rel=\"noopener\">Futurism</a> and others."
+},    {
       "url": "https://www.cjr.org/tow_center/ai-chatbots-can-search-the-web-so-why-dont-they.php",
       "image": "assets/thumb-chatbots.png",
       "imageAlt": "Chatbot correcting a false premise in a user query",
       "title": "AI Chatbots Can Search the Web—So Why Don’t They?",
-      "description": "Why major chatbots often avoid live web search and what that means for news.",
+      "description": "Live search is resource-intensive and adds latency, so platforms rely on automated routing systems to decide when to deploy these tools. This routing can misfire.",
       "tags": ["writing"]
     },
     {
@@ -40,7 +38,7 @@
       "image": "assets/thumb-pollfinder.png",
       "imageAlt": "PollFinder.ai",
       "title": "‘Automating the Boring Stuff’ with Pollfinder.ai",
-      "description": "How PollFinder.ai helps automate the tedious work of finding and tracking polls for newsrooms.",
+      "description": "Pollfinder.ai is a tool we are building that uses large language models (LLMs) to help polling aggregators discover, extract, and organize polling data more efficiently.",
       "tags": ["writing"]
     }
   ],
