@@ -331,6 +331,17 @@ a:hover {
   gap: 0 var(--grid-gap);
 }
 
+.section-header--kicker-tight {
+  grid-template-columns: auto 1fr;
+  gap: 0 0.75rem;
+  align-items: baseline;
+}
+
+.section-header--kicker-tight .section-kicker {
+  margin: 0;
+  padding-top: 0;
+}
+
 .section-title {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.75rem;
