@@ -24,7 +24,7 @@
       "image": "assets/thumb-ai-browsers.png",
       "imageAlt": "ChatGPT Atlas logo on a phone screen",
       "title": "How AI Browsers Sneak Past Blockers and Paywalls",
-      "descriptionHtml": "Agents mimic standard Chrome sessions, making them indistinguishable from regular human traffic and invisible to crawler-blocking tools. This report was covered by <a href=\"https://gizmodo.com/chatgpts-browser-bot-seems-to-avoid-new-york-times-links-like-a-rat-who-got-electrocuted-2000680444\" target=\"_blank\" rel=\"noopener\">Gizmodo</a>, <a href=\"https://mashable.com/article/some-ai-browsers-can-bypass-paywalls\" target=\"_blank\" rel=\"noopener\">Mashable</a>, <a href=\"https://futurism.com/artificial-intelligence/openai-browser-avoids-web-lawsuit\" target=\"_blank\" rel=\"noopener\">Futurism</a> and others."
+      "descriptionHtml": "Agents mimic standard Chrome sessions, making them indistinguishable from regular human traffic and invisible to crawler-blocking tools. This report was covered by <a href=\"https://gizmodo.com/chatgpts-browser-bot-seems-to-avoid-new-york-times-links-like-a-rat-who-got-electrocuted-2000680444\" target=\"_blank\" rel=\"noopener\">Gizmodo</a> and others."
 },    {
       "url": "https://www.cjr.org/tow_center/ai-chatbots-can-search-the-web-so-why-dont-they.php",
       "image": "assets/thumb-chatbots.png",

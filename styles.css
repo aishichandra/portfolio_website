@@ -285,6 +285,19 @@ a:hover {
   margin: 0 0 1rem;
 }
 
+.footer-aside {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+}
+
+.footer-aside a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+
 .footer-copy {
   font-size: 0.8125rem;
   color: #666;
