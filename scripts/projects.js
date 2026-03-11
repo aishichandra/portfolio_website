@@ -24,23 +24,32 @@
       var wideClass = item.wide ? ' grid-item--wide grid-item--spotlight' : '';
       var thumb = '';
       if (item.image) {
-        thumb = '<div class="grid-thumb"><img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.imageAlt || '') + '"></div>';
+        thumb =
+          '<a class="grid-thumb" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' +
+            '<img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.imageAlt || '') + '">' +
+          '</a>';
       } else {
-        thumb = '<div class="grid-thumb"><div class="grid-thumb-placeholder" aria-hidden="true"></div></div>';
+        thumb =
+          '<a class="grid-thumb" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' +
+            '<div class="grid-thumb-placeholder" aria-hidden="true"></div>' +
+          '</a>';
       }
       var more = item.more
         ? '<p class="grid-item-more">' + escapeHtml(item.more) + '</p>'
         : '';
+      var linksBlock = renderTalkLinks(item.links);
       html +=
-        '<a class="grid-item' + wideClass + '" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' +
+        '<div class="grid-item' + wideClass + '">' +
           '<div class="grid-block">' + thumb +
             '<div class="grid-block-text">' +
-              '<h3 class="grid-item-title">' + escapeHtml(item.title) + '</h3>' +
+              '<h3 class="grid-item-title">' +
+                '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' + escapeHtml(item.title) + '</a>' +
+              '</h3>' +
               '<p class="grid-item-desc">' + escapeHtml(item.description) + '</p>' + more +
-              '<p class="grid-item-tags">' + renderTags(item.tags) + '</p>' +
+              '<p class="grid-item-tags">' + renderTags(item.tags) + '</p>' + linksBlock +
             '</div>' +
           '</div>' +
-        '</a>';
+        '</div>';
     });
     return html;
   }
@@ -66,7 +75,17 @@
     if (!links || !links.length) return '';
     var html = '<p class="talk-links">';
     links.forEach(function (link) {
-      html += '<a class="talk-link" href="' + escapeHtml(link.url) + '" target="_blank" rel="noopener">' + escapeHtml(link.label) + '</a>';
+      var label = (link.label || '').toLowerCase();
+      if (label === 'github') {
+        html +=
+          '<a class="talk-link talk-link--icon" href="' + escapeHtml(link.url) + '" target="_blank" rel="noopener" aria-label="GitHub">' +
+            '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">' +
+              '<path d="M8 0C3.58 0 0 3.73 0 8.33c0 3.68 2.29 6.8 5.47 7.9.4.08.55-.18.55-.39 0-.19-.01-.82-.01-1.49-2.01.38-2.53-.51-2.69-.99-.09-.25-.48-.99-.82-1.19-.28-.16-.68-.55-.01-.56.63-.01 1.08.6 1.23.85.72 1.27 1.87.91 2.33.69.07-.54.28-.91.51-1.12-1.78-.21-3.64-.93-3.64-4.12 0-.91.31-1.65.82-2.23-.08-.21-.36-1.06.08-2.2 0 0 .67-.22 2.2.85.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.08 2.2-.85 2.2-.85.44 1.14.16 1.99.08 2.2.51.58.82 1.32.82 2.23 0 3.2-1.87 3.91-3.65 4.12.29.27.54.8.54 1.61 0 1.16-.01 2.1-.01 2.39 0 .21.15.47.55.39 3.18-1.1 5.47-4.22 5.47-7.9C16 3.73 12.42 0 8 0Z"></path>' +
+            '</svg>' +
+          '</a>';
+      } else {
+        html += '<a class="talk-link" href="' + escapeHtml(link.url) + '" target="_blank" rel="noopener">' + escapeHtml(link.label) + '</a>';
+      }
     });
     return html + '</p>';
   }

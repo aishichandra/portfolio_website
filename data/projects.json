@@ -4,57 +4,55 @@
       "url": "https://www.cjr.org/tow_center/why-ai-models-are-bad-at-verifying-photos.php",
       "image": "assets/SVG/Asset 1.svg",
       "imageAlt": "",
-      "title": "Why AI models are bad at verifying photos",
+      "title": "Why AI Models Are Bad at Verifying Photos",
       "description": "Testing how leading AI image models perform when asked to verify the authenticity of photos.",
-      "tags": ["AI", "verification", "images"]
+      "tags": ["experiment design", "data analysis", "writing", "graphics"]
     },
     {
       "url": "https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php",
       "image": "assets/SVG/Asset 2.svg",
       "imageAlt": "Comparison charts of eight AI search engines' citation performance",
-      "title": "AI search has a citation problem",
+      "title": "AI Search Has a Citation Problem",
       "description": "Comparing eight AI search engines and their ability to cite news sources.",
-      "more": "We tested eight AI search tools—including ChatGPT Search, Perplexity, Gemini, and Copilot—with 200 real news excerpts. In over 60% of cases they failed to return the correct article, title, or URL. Many gave confident wrong answers or broken links. The report has been covered by Nieman Lab, Ars Technica, Axios, and El País.",
-      "tags": ["AI", "search", "citations"],
+      "more": "This report has been covered by Nieman Lab, Ars Technica, Axios, El País, and more.",
+      "tags": ["experiment design", "data analysis", "writing", "graphics"],
       "wide": true,
       "spotlight": true
     },
     {
       "url": "https://www.cjr.org/analysis/how-ai-browsers-sneak-past-blockers-and-paywalls.php",
       "image": null,
-      "title": "How AI browsers sneak past blockers and paywalls",
+      "title": "How AI Browsers Sneak Past Blockers and Paywalls",
       "description": "How AI-powered browsers can bypass paywalls and ad blockers and what publishers are doing.",
-      "tags": ["AI", "paywalls", "browsers"]
+      "tags": ["writing"]
     },
     {
       "url": "https://www.cjr.org/tow_center/ai-chatbots-can-search-the-web-so-why-dont-they.php",
       "image": "assets/thumb-chatbots.png",
       "imageAlt": "Chatbot correcting a false premise in a user query",
-      "title": "AI chatbots can search the web – so why don't they?",
+      "title": "AI Chatbots Can Search the Web—So Why Don’t They?",
       "description": "Why major chatbots often avoid live web search and what that means for news.",
-      "tags": ["AI", "search", "chatbots"]
+      "tags": ["writing"]
     },
     {
       "url": "https://www.cjr.org/tow_center/automating-the-boring-stuff-with-pollfinder-ai.php",
       "image": "assets/thumb-pollfinder.png",
       "imageAlt": "PollFinder.ai",
-      "title": "Automating the boring stuff with PollFinder.ai",
+      "title": "‘Automating the Boring Stuff’ with Pollfinder.ai",
       "description": "How PollFinder.ai helps automate the tedious work of finding and tracking polls for newsrooms.",
-      "tags": ["AI", "polls", "tools"]
+      "tags": ["writing"]
     }
   ],
   "interactives": [
     {
       "url": "https://tow.cjr.org/ai-deals-lawsuits/",
-      "title": "AI deals and disputes tracker",
-      "description": "A running tracker of deals, lawsuits, and disputes involving AI and news organizations.",
-      "tags": ["tracker", "AI", "deals"]
+      "title": "AI Deals and Disputes Tracker",
+      "description": "This tracker monitors developments between news publishers and AI companies—including Lawsuits, Deals, and Grants—based on publicly available information."
     },
     {
       "url": "https://tow.cjr.org/platform-timeline/",
-      "title": "Platforms and publishers timeline",
-      "description": "A timeline of key moments between platforms and publishers.",
-      "tags": ["tracker", "platforms", "publishers"]
+      "title": "Platforms and Publishers Timeline",
+      "description": "A timeline of key developments in the relationship between technology platforms and news publishers"
     }
   ]
 }
