@@ -13,9 +13,16 @@
 
   function renderTags(tags) {
     if (!tags || !tags.length) return '';
+    // Don't show tags when the only tag is "writing"
+    if (tags.length === 1 && String(tags[0]).toLowerCase() === 'writing') return '';
     return tags.map(function (t) {
       return '<span class="tag">' + escapeHtml(t) + '</span>';
     }).join(' ');
+  }
+
+  function renderTagsBlock(tags) {
+    var content = renderTags(tags);
+    return content ? '<p class="grid-item-tags">' + content + '</p>' : '';
   }
 
   function renderSelectedWork(items) {
@@ -47,7 +54,7 @@
                 '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' + escapeHtml(item.title) + '</a>' +
               '</h3>' +
               '<p class="grid-item-desc">' + desc + '</p>' + more +
-              '<p class="grid-item-tags">' + renderTags(item.tags) + '</p>' + linksBlock +
+              renderTagsBlock(item.tags) + linksBlock +
             '</div>' +
           '</div>' +
         '</div>';
@@ -64,7 +71,7 @@
             '<div class="grid-block-text">' +
               '<h3 class="grid-item-title">' + escapeHtml(item.title) + '</h3>' +
               '<p class="grid-item-desc">' + escapeHtml(item.description) + '</p>' +
-              '<p class="grid-item-tags">' + renderTags(item.tags) + '</p>' +
+              renderTagsBlock(item.tags) +
             '</div>' +
           '</div>' +
         '</a>';
