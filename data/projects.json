@@ -2,8 +2,8 @@
   "selectedWork": [
     {
       "url": "https://www.cjr.org/tow_center/why-ai-models-are-bad-at-verifying-photos.php",
-      "image": "assets/SVG/Asset 1.svg",
-      "imageAlt": "",
+      "image": "assets/thumb-ai-verify.png",
+      "imageAlt": "Rabbit-duck illusion diagram on a black background",
       "title": "Why AI Models Are Bad at Verifying Photos",
       "description": "Testing how leading AI image models perform when asked to verify the authenticity of photos.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"]
@@ -14,14 +14,15 @@
       "imageAlt": "Comparison charts of eight AI search engines' citation performance",
       "title": "AI Search Has a Citation Problem",
       "description": "Comparing eight AI search engines and their ability to cite news sources.",
-      "more": "This report has been covered by Nieman Lab, Ars Technica, Axios, El País, and more.",
+      "more": "This report has been covered by Nieman Lab, Ars Technica, Axios, El País, among others.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"],
       "wide": true,
       "spotlight": true
     },
     {
       "url": "https://www.cjr.org/analysis/how-ai-browsers-sneak-past-blockers-and-paywalls.php",
-      "image": null,
+      "image": "assets/thumb-ai-browsers.png",
+      "imageAlt": "ChatGPT Atlas logo on a phone screen",
       "title": "How AI Browsers Sneak Past Blockers and Paywalls",
       "description": "How AI-powered browsers can bypass paywalls and ad blockers and what publishers are doing.",
       "tags": ["writing"]

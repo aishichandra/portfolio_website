@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playground — Aisvarya Chandrasekar</title>
+  <title>Play — Aisvarya Chandrasekar</title>
   <meta name="description" content="Illustrations, photographs, hobbies, and other experiments.">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="play-page">
+  <canvas class="doodle-canvas" id="doodle-canvas" aria-hidden="true"></canvas>
   <div class="page">
     <header class="header">
       <nav class="nav">
-        <a href="playground.html" class="nav-current">Playground</a>
+        <a href="playground.html" class="nav-current">Play 🖍️</a>
       </nav>
       <div class="header-inner">
         <h1 class="name"><a href="index.html">Aisvarya Chandrasekar</a></h1>
@@ -353,6 +354,111 @@
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && !modal.hidden) closeModal();
       });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var canvas = document.getElementById('doodle-canvas');
+      if (!canvas) return;
+      if (window.matchMedia && window.matchMedia('(max-width: 800px), (hover: none), (pointer: coarse)').matches) return;
+      var ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      var drawing = false;
+      var lastX = 0;
+      var lastY = 0;
+      var activePointerId = null;
+      var prevW = 0;
+      var prevH = 0;
+      var prevDpr = 0;
+
+      function isInteractiveTarget(target) {
+        if (!target || !(target instanceof Element)) return false;
+        return Boolean(target.closest(
+          'a, button, input, textarea, select, summary, details, iframe, video, [role="button"], .playground-card-link-wrap, .talk-link'
+        ));
+      }
+
+      function resize() {
+        var dpr = window.devicePixelRatio || 1;
+        var doc = document.documentElement;
+        var w = Math.max(doc.scrollWidth, window.innerWidth);
+        var h = Math.max(doc.scrollHeight, window.innerHeight);
+        var nextW = Math.floor(w * dpr);
+        var nextH = Math.floor(h * dpr);
+
+        // Only grow (or change DPR) to avoid wiping drawings while scrolling.
+        if (nextW <= prevW && nextH <= prevH && dpr === prevDpr) {
+          canvas.style.width = w + 'px';
+          canvas.style.height = h + 'px';
+          return;
+        }
+
+        var snapshot = null;
+        if (prevW && prevH) {
+          snapshot = document.createElement('canvas');
+          snapshot.width = prevW;
+          snapshot.height = prevH;
+          var sctx = snapshot.getContext('2d');
+          if (sctx) sctx.drawImage(canvas, 0, 0);
+        }
+
+        canvas.width = nextW;
+        canvas.height = nextH;
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.strokeStyle = 'rgba(10, 10, 10, 0.65)';
+        ctx.lineWidth = 2.4;
+
+        if (snapshot) {
+          ctx.setTransform(1, 0, 0, 1, 0, 0);
+          ctx.drawImage(snapshot, 0, 0);
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        prevW = nextW;
+        prevH = nextH;
+        prevDpr = dpr;
+      }
+
+      function start(e) {
+        if (e.pointerType && e.pointerType !== 'mouse' && e.pointerType !== 'pen') return;
+        if (isInteractiveTarget(e.target)) return;
+        drawing = true;
+        activePointerId = e.pointerId;
+        lastX = e.pageX;
+        lastY = e.pageY;
+        e.preventDefault();
+      }
+
+      function move(e) {
+        if (!drawing) return;
+        if (activePointerId !== null && e.pointerId !== activePointerId) return;
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(e.pageX, e.pageY);
+        ctx.stroke();
+        lastX = e.pageX;
+        lastY = e.pageY;
+      }
+
+      function end(e) {
+        if (activePointerId !== null && e && e.pointerId !== activePointerId) return;
+        drawing = false;
+        activePointerId = null;
+      }
+
+      document.addEventListener('pointerdown', start, { capture: true });
+      window.addEventListener('pointermove', move, { passive: false });
+      window.addEventListener('pointerup', end);
+      window.addEventListener('pointercancel', end);
+
+      window.addEventListener('resize', resize);
+      resize();
     })();
   </script>
 </body>
