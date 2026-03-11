@@ -480,6 +480,7 @@
           }
           drawing = true;
           pending = false;
+          document.body.classList.add('doodle-drawing');
         }
 
         if (activePointerId !== null && e.pointerId !== activePointerId) return;
@@ -498,6 +499,7 @@
         pending = false;
         activePointerId = null;
         startTarget = null;
+        document.body.classList.remove('doodle-drawing');
       }
 
       document.addEventListener('pointerdown', start, { capture: true });

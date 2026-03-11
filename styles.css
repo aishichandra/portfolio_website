@@ -55,6 +55,16 @@ body {
   cursor: pointer;
 }
 
+/* Disable text selection while doodling so strokes in margins don't highlight text */
+body.play-page.doodle-drawing {
+  user-select: none;
+  -webkit-user-select: none;
+}
+body.play-page.doodle-drawing * {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 .doodle-canvas {
   position: absolute;
   top: 0;
