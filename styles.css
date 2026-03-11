@@ -35,6 +35,10 @@ body {
   background: #fff;
 }
 
+.home-page {
+  background-color: #fff;
+}
+
 .play-page {
   background-color: #fff;
   background-image:
@@ -428,7 +432,7 @@ a:hover {
   gap: 0.75rem;
   padding: 1.25rem;
   background: #fff;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #d5d5d5;
   transition: border-color 0.2s ease;
 }
 

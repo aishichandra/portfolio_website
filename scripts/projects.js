@@ -34,9 +34,10 @@
             '<div class="grid-thumb-placeholder" aria-hidden="true"></div>' +
           '</a>';
       }
-      var more = item.more
-        ? '<p class="grid-item-more">' + escapeHtml(item.more) + '</p>'
-        : '';
+      var desc = item.descriptionHtml || (item.description ? escapeHtml(item.description) : '');
+      var more = item.moreHtml
+        ? '<p class="grid-item-more">' + item.moreHtml + '</p>'
+        : (item.more ? '<p class="grid-item-more">' + escapeHtml(item.more) + '</p>' : '');
       var linksBlock = renderTalkLinks(item.links);
       html +=
         '<div class="grid-item' + wideClass + '">' +
@@ -45,7 +46,7 @@
               '<h3 class="grid-item-title">' +
                 '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' + escapeHtml(item.title) + '</a>' +
               '</h3>' +
-              '<p class="grid-item-desc">' + escapeHtml(item.description) + '</p>' + more +
+              '<p class="grid-item-desc">' + desc + '</p>' + more +
               '<p class="grid-item-tags">' + renderTags(item.tags) + '</p>' + linksBlock +
             '</div>' +
           '</div>' +

@@ -13,8 +13,8 @@
       "image": "assets/SVG/Asset 2.svg",
       "imageAlt": "Comparison charts of eight AI search engines' citation performance",
       "title": "AI Search Has a Citation Problem",
-      "description": "Comparing eight AI search engines and their ability to cite news sources.",
-      "more": "This report has been covered by Nieman Lab, Ars Technica, Axios, El País, among others.",
+      "descriptionHtml": "Comparing eight AI search engines and their ability to cite news sources. This builds on our <a href=\"https://www.cjr.org/tow_center/how-chatgpt-misrepresents-publisher-content.php\" target=\"_blank\" rel=\"noopener\">previous report</a>, which looks at how ChatGPT performs at citing news sources.",
+      "moreHtml": "This report has been covered by <a href=\"https://www.niemanlab.org/2025/03/ai-search-engines-fail-to-produce-accurate-citations-in-over-60-of-tests-according-to-new-tow-center-study/\" target=\"_blank\" rel=\"noopener\">Nieman Lab</a>, <a href=\"https://arstechnica.com/ai/2025/03/ai-search-engines-give-incorrect-answers-at-an-alarming-60-rate-study-says/\" target=\"_blank\" rel=\"noopener\">Ars Technica</a>, <a href=\"https://www.axios.com/newsletters/axios-login-7b9e5139-d1f2-4fcb-84ff-9002097f5489.html?chunk=0\" target=\"_blank\" rel=\"noopener\">Axios</a>, <a href=\"https://elpais.com/proyecto-tendencias/2025-04-25/citas-falsas-y-respuestas-confiadamente-incorrectas-los-chatbots-son-incapaces-de-atribuir-las-informaciones.html\" target=\"_blank\" rel=\"noopener\">El País</a>, among others.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"],
       "wide": true,
       "spotlight": true
