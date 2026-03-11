@@ -1662,14 +1662,14 @@ a:hover {
 }
 
 .section-title--knitting {
-  font-family: 'Caveat', cursive;
+  font-family: 'Caveat', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   text-transform: none;
   letter-spacing: 0;
 }
 
 .knitting-timeline-caption {
-  font-family: 'Caveat', cursive;
+  font-family: 'Caveat', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   color: #333;
   line-height: 1.4;
@@ -1678,7 +1678,7 @@ a:hover {
 }
 
 .knitting-timeline-date {
-  font-family: 'Caveat', cursive;
+  font-family: 'Caveat', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.9rem;
   color: #666;
   margin: 0.35rem 0 0;
