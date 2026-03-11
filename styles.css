@@ -1749,6 +1749,10 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.greece-page .playground-gallery-desc--spaced {
+  margin-top: 2.5rem;
+}
+
 .greece-gallery {
   display: flex;
   flex-direction: row;
