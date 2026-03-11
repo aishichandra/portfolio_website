@@ -12,7 +12,7 @@
   <div class="page">
     <header class="header">
       <nav class="nav">
-        <a href="playground.html">Play 🖍️</a>
+        <a href="playground.html">playground 🖍️</a>
       </nav>
       <div class="header-inner">
         <h1 class="name">Aisvarya Chandrasekar</h1>
@@ -43,71 +43,14 @@
           <h2 class="section-title">Selected work</h2>
           <p class="section-kicker"><a href="https://www.cjr.org/author/aisvarya-chandrasekar" target="_blank" rel="noopener">Read more →</a></p>
         </header>
-        <div id="selected-work-grid" class="grid"><!-- Projects loaded from data/projects.json -->
-          <div class="grid-item grid-item--wide grid-item--spotlight">
-            <div class="grid-block">
-              <a class="grid-thumb" href="https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php" target="_blank" rel="noopener">
-                <img src="assets/SVG/Asset 2.svg" alt="Comparison charts of eight AI search engines’ citation performance">
-              </a>
-              <div class="grid-block-text">
-                <h3 class="grid-item-title">
-                  <a href="https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php" target="_blank" rel="noopener">AI search has a citation problem</a>
-                </h3>
-                <p class="grid-item-desc">Comparing eight AI search engines and their ability to cite news sources.</p>
-                <p class="grid-item-more">We tested eight AI search tools—including ChatGPT Search, Perplexity, Gemini, and Copilot—with 200 real news excerpts. In over 60% of cases they failed to return the correct article, title, or URL. Many gave confident wrong answers or broken links. The report has been covered by Nieman Lab, Ars Technica, Axios, and El País.</p>
-                <p class="talk-links">
-                  <a class="talk-link" href="https://github.com/TowCenter/genSearch-Part2/tree/main" target="_blank" rel="noopener">GitHub</a>
-                </p>
-                <p class="grid-item-tags"><span class="tag">AI</span> <span class="tag">search</span> <span class="tag">citations</span></p>
-              </div>
-              </div>
-          </div>
-          <div class="grid-item">
-            <div class="grid-block">
-              <a class="grid-thumb" href="https://www.cjr.org/analysis/how-ai-browsers-sneak-past-blockers-and-paywalls.php" target="_blank" rel="noopener">
-                <div class="grid-thumb-placeholder" aria-hidden="true"></div>
-              </a>
-              <div class="grid-block-text">
-                <h3 class="grid-item-title">
-                  <a href="https://www.cjr.org/analysis/how-ai-browsers-sneak-past-blockers-and-paywalls.php" target="_blank" rel="noopener">How AI browsers sneak past blockers and paywalls</a>
-                </h3>
-                <p class="grid-item-desc">How AI-powered browsers can bypass paywalls and ad blockers and what publishers are doing. Covered by <a href="https://gizmodo.com/chatgpts-browser-bot-seems-to-avoid-new-york-times-links-like-a-rat-who-got-electrocuted-2000680444" target="_blank" rel="noopener">Gizmodo</a>.</p>
-                <p class="grid-item-tags"><span class="tag">AI</span> <span class="tag">paywalls</span> <span class="tag">browsers</span></p>
-              </div>
-              </div>
-          </div>
-          <a class="grid-item" href="https://www.cjr.org/tow_center/ai-chatbots-can-search-the-web-so-why-dont-they.php" target="_blank" rel="noopener">
-            <div class="grid-block">
-              <div class="grid-thumb">
-                <img src="assets/thumb-chatbots.png" alt="Chatbot correcting a false premise in a user query">
-              </div>
-              <div class="grid-block-text">
-                <h3 class="grid-item-title">AI chatbots can search the web – so why don't they?</h3>
-                <p class="grid-item-desc">Why major chatbots often avoid live web search and what that means for news.</p>
-                <p class="grid-item-tags"><span class="tag">AI</span> <span class="tag">search</span> <span class="tag">chatbots</span></p>
-              </div>
-              </div>
-          </a>
-          <a class="grid-item" href="https://www.cjr.org/tow_center/automating-the-boring-stuff-with-pollfinder-ai.php" target="_blank" rel="noopener">
-            <div class="grid-block">
-              <div class="grid-thumb">
-                <img src="assets/thumb-pollfinder.png" alt="PollFinder.ai">
-              </div>
-              <div class="grid-block-text">
-                <h3 class="grid-item-title">Automating the boring stuff with PollFinder.ai</h3>
-                <p class="grid-item-desc">How PollFinder.ai helps automate the tedious work of finding and tracking polls for newsrooms.</p>
-                <p class="grid-item-tags"><span class="tag">AI</span> <span class="tag">polls</span> <span class="tag">tools</span></p>
-              </div>
-              </div>
-          </a>
-        </div>
+        <div id="selected-work-grid" class="grid" aria-busy="true" aria-live="polite"><!-- Filled by scripts/projects.js from data/projects.json --></div>
       </section>
 
       <section class="section interactives">
         <header class="section-header">
           <h2 class="section-title">Interactives</h2>
         </header>
-        <div id="interactives-grid" class="grid"><!-- Loaded from data/projects.json --></div>
+        <div id="interactives-grid" class="grid" aria-live="polite"><!-- Filled by scripts/projects.js from data/projects.json --></div>
       </section>
 
       <section class="section">
@@ -189,6 +132,6 @@
       <p class="footer-copy">© 2026</p>
     </footer>
   </div>
-  <script src="scripts/projects.js"></script>
+  <script src="scripts/projects.js" defer></script>
 </body>
 </html>

@@ -35,10 +35,6 @@ body {
   background: #fff;
 }
 
-.home-page {
-  background-color: #fff;
-}
-
 .play-page {
   background-color: #fff;
   background-image:
@@ -402,6 +398,7 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 380px;
   gap: 2rem;
+  contain: layout;
 }
 
 @media (max-width: 800px) {
@@ -523,6 +520,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  min-width: 0;
 }
 
 .grid-item-title {

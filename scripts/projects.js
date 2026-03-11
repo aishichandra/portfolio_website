@@ -180,6 +180,8 @@
     var interactivesEl = document.getElementById('interactives-grid');
     var speakingEl = document.getElementById('speaking-content');
 
+    if (!selectedEl && !interactivesEl && !speakingEl) return;
+
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'data/projects.json', true);
     xhr.onreadystatechange = function () {
@@ -192,12 +194,14 @@
         var data = JSON.parse(xhr.responseText);
         if (selectedEl && data.selectedWork) {
           selectedEl.innerHTML = renderSelectedWork(data.selectedWork);
+          selectedEl.removeAttribute('aria-busy');
         }
         if (interactivesEl && data.interactives) {
           interactivesEl.innerHTML = renderInteractives(data.interactives);
         }
       } catch (e) {
         if (selectedEl) selectedEl.innerHTML = '<p>Invalid projects data.</p>';
+        if (selectedEl) selectedEl.removeAttribute('aria-busy');
       }
     };
     xhr.send();
