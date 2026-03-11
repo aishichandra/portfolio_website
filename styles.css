@@ -345,6 +345,16 @@ a:hover {
   transition: color 0.2s ease;
 }
 
+.grid-item-date {
+  font-size: 0.75rem;
+  color: #666;
+  margin: 0;
+}
+
+.grid-item-date:empty {
+  display: none;
+}
+
 .grid-item-more {
   font-size: 0.875rem;
   font-weight: 400;
