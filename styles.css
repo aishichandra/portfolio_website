@@ -185,7 +185,7 @@ a:hover {
   max-width: min(38em, 100%);
   color: #333;
   overflow-wrap: break-word;
-  hyphens: auto;
+  hyphens: none;
 }
 
 .header-icons {
@@ -456,7 +456,7 @@ a:hover {
 
 .section.interactives .grid-item-desc {
   overflow-wrap: break-word;
-  hyphens: auto;
+  hyphens: none;
 }
 
 /* Interactives: single column on narrow viewports (e.g. Surface Duo, small tablets) */
