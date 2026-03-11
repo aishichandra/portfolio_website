@@ -1421,6 +1421,45 @@ a:hover {
   margin-top: 1.5rem;
 }
 
+/* Chicago Transformation Collab page */
+.ctc-gallery {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.ctc-row {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.ctc-row--1 {
+  grid-template-columns: 1fr;
+}
+
+.ctc-row--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ctc-row--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ctc-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+@media (max-width: 700px) {
+  .ctc-row--2,
+  .ctc-row--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Greece page – Notion-style gallery */
 .greece-page .playground-gallery-desc {
   margin-bottom: 2rem;
