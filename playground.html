@@ -58,6 +58,7 @@
               </a>
               <div class="playground-card-body playground-card-body--secondary">
                 <p class="playground-card-desc">Illustrations inspired by the <a href="https://www.biodiversitylibrary.org/" target="_blank" rel="noopener">Biodiversity Heritage Library</a>. It was my <a href="https://www.domestika.org/en/projects/779199-my-project-in-flat-illustration-with-photoshop-course" target="_blank" rel="noopener">final project</a> for the Domestika course taught by Willian Santiago. Created with Adobe Illustrator.</p>
+                <p class="playground-card-seemore"><a href="biodiversity.html">See more →</a></p>
               </div>
             </article>
             <article class="playground-card playground-card--image project-carousel-item">
@@ -72,6 +73,7 @@
               </a>
               <div class="playground-card-body playground-card-body--secondary">
                 <p class="playground-card-desc">Illustrations from my trip to Athens, Greece. This was my <a href="https://www.domestika.org/en/projects/1635902-my-project-for-course-traditional-drawing-techniques-with-procreate" target="_blank" rel="noopener">final project</a> for a Domestika course taught by Laura Pérez.</p>
+                <p class="playground-card-seemore"><a href="greece.html">See more →</a></p>
               </div>
             </article>
             <article class="playground-card playground-card--image project-carousel-item">
@@ -86,6 +88,7 @@
               </a>
               <div class="playground-card-body playground-card-body--secondary">
                 <p class="playground-card-desc">Illustrations for a five-part event series addressing how Indian Arts stakeholders could formalize their workspaces through contracts and boundary-setting.</p>
+                <p class="playground-card-seemore"><a href="iapt.html">See more →</a></p>
               </div>
             </article>
             <article class="playground-card playground-card--image project-carousel-item">
@@ -100,6 +103,7 @@
               </a>
               <div class="playground-card-body playground-card-body--secondary">
                 <p class="playground-card-desc">Illustration, Logo Design, and Brand Identity and Mockups for an Indian dance school. All the elements of this brand were illustrated on Adobe Illustrator.</p>
+                <p class="playground-card-seemore"><a href="indisha.html">See more →</a></p>
               </div>
             </article>
             <article class="playground-card playground-card--image project-carousel-item">
@@ -114,6 +118,7 @@
               </a>
               <div class="playground-card-body playground-card-body--secondary">
                 <p class="playground-card-desc">For one week, every day at a predetermined time, I set a timer for 5 mins and drew what was in front of me.</p>
+                <p class="playground-card-seemore"><a href="sketches.html">See more →</a></p>
               </div>
             </article>
             <article class="playground-card playground-card--image project-carousel-item">
@@ -128,6 +133,7 @@
               </a>
               <div class="playground-card-body playground-card-body--secondary">
                 <p class="playground-card-desc">As a graphic design intern at Zealous, I helped design an immersive visual experience for a summit that brought together community leaders from 15 Chicago-area communities to collaborate on shared visions for safety and justice.</p>
+                <p class="playground-card-seemore"><a href="chicago-transformation.html">See more →</a></p>
               </div>
             </article>
           </div>
@@ -180,7 +186,7 @@
           <article class="playground-card playground-card--image" id="pollfinder-card" role="button" tabindex="0" aria-label="Play Pollfinder Explainer video">
             <div class="playground-card-link-wrap">
               <div class="playground-card-image">
-                <video id="pollfinder-preview" src="assets/playground/PollfinderExplainer.mp4" muted loop playsinline autoplay></video>
+                <img src="assets/playground/Pollfinder%20Explainer%20GIF%20from%20ezgif.gif" alt="Pollfinder Explainer video thumbnail">
               </div>
               <div class="playground-card-body">
                 <h3 class="playground-card-title">Pollfinder Explainer</h3>
@@ -319,28 +325,28 @@
     <div class="video-modal-backdrop"></div>
     <div class="video-modal-inner">
       <button type="button" class="video-modal-close" aria-label="Close">×</button>
-      <video id="pollfinder-full" src="assets/playground/PollfinderExplainer.mp4" controls playsinline></video>
+      <video id="pollfinder-full" data-src="assets/playground/PollfinderExplainer.mp4" controls playsinline></video>
     </div>
   </div>
 
   <script>
     (function () {
-      var preview = document.getElementById('pollfinder-preview');
       var card = document.getElementById('pollfinder-card');
       var modal = document.getElementById('pollfinder-modal');
       var fullVideo = document.getElementById('pollfinder-full');
       var backdrop = modal.querySelector('.video-modal-backdrop');
       var closeBtn = modal.querySelector('.video-modal-close');
-      var LOOP_END = 5;
-
-      if (preview) {
-        preview.removeAttribute('loop');
-        preview.addEventListener('timeupdate', function () {
-          if (preview.currentTime >= LOOP_END) preview.currentTime = 0;
-        });
-      }
+      var fullVideoLoaded = false;
 
       function openModal() {
+        if (fullVideo && !fullVideoLoaded) {
+          var src = fullVideo.getAttribute('data-src');
+          if (src) {
+            fullVideo.src = src;
+            fullVideo.load();
+            fullVideoLoaded = true;
+          }
+        }
         modal.hidden = false;
         document.body.style.overflow = 'hidden';
         fullVideo.currentTime = 0;

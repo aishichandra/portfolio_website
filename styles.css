@@ -1456,6 +1456,22 @@ a:hover {
   margin: 0;
 }
 
+.playground-card-seemore {
+  font-size: 0.8125rem;
+  margin: 0.5rem 0 0;
+  font-weight: 500;
+}
+
+.playground-card-seemore a {
+  color: #0a0a0a;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.playground-card-seemore a:hover {
+  border-bottom-color: currentColor;
+}
+
 .playground-card--compact .playground-card-body {
   padding: 0.875rem 1rem;
 }
