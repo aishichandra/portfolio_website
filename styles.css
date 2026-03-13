@@ -267,6 +267,21 @@ a:hover {
   color: #1a1a1a;
 }
 
+.sketches-link {
+  position: relative;
+  text-decoration: none !important;
+}
+
+.sketches-link::before {
+  content: '';
+  position: absolute;
+  inset: -1px -3px;
+  background: rgba(255, 220, 50, 0.45);
+  transform: rotate(-0.8deg) skewX(-3deg);
+  z-index: -1;
+  pointer-events: none;
+}
+
 .nav a.nav-current {
   font-weight: 600;
   color: #0a0a0a;
