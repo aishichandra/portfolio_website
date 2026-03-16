@@ -270,13 +270,16 @@ a:hover {
 .sketches-link {
   position: relative;
   text-decoration: none !important;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 .sketches-link::before {
   content: '';
   position: absolute;
-  inset: -1px -3px;
-  background: rgba(255, 220, 50, 0.45);
+  inset: -2px -5px;
+  background: rgba(255, 210, 0, 0.7);
   transform: rotate(-0.8deg) skewX(-3deg);
   z-index: -1;
   pointer-events: none;
@@ -301,16 +304,36 @@ a:hover {
 }
 
 .footer-aside {
-  font-size: 1rem;
+  font-size: clamp(1.375rem, 2vw, 1.75rem);
   font-weight: 500;
   margin: 0 0 0.75rem;
+  line-height: 1.3;
+}
+
+.footer-aside-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.02em;
 }
 
 .footer-aside a {
+  display: inline-block;
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1.5px;
+  text-decoration: none;
+  position: relative;
+}
+
+.footer-aside a::before {
+  content: '';
+  position: absolute;
+  inset: -2px -5px;
+  background: rgba(255, 210, 0, 0.7);
+  transform: rotate(-0.5deg) skewX(-2deg);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .footer-copy {
