@@ -271,15 +271,15 @@ a:hover {
   position: relative;
   text-decoration: none !important;
   font-size: 0.9375rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0;
 }
 
 .sketches-link::before {
   content: '';
   position: absolute;
-  inset: -2px -5px;
-  background: rgba(255, 210, 0, 0.7);
+  inset: -1px -3px;
+  background: rgba(255, 210, 0, 0.45);
   transform: rotate(-0.8deg) skewX(-3deg);
   z-index: -1;
   pointer-events: none;
