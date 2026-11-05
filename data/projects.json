@@ -1,12 +1,12 @@
 {
   "selectedWork": [
     {
-      "url": "https://www.cjr.org/tow_center/why-ai-models-are-bad-at-verifying-photos.php",
-      "image": "assets/thumb-ai-verify.png",
-      "imageAlt": "Rabbit-duck illusion diagram on a black background",
-      "title": "Why AI Models Are Bad at Verifying Photos",
-      "description": "We tested how leading AI image models perform when asked to verify the authenticity of photos.",
-      "tags": ["experiment design", "data analysis", "writing", "graphics"]
+      "url": "https://www.theexamination.org/articles/red-bull-alcohol-research-methodology",
+      "image": "assets/thumb-red-bull.jpg",
+      "imageAlt": "Illustration for The Examination’s investigation into Red Bull’s ties to energy drink research",
+      "title": "How AI helped us uncover Red Bull’s influence on energy drink research",
+      "description": "We used a large language model to trace financial ties between researchers and energy drink companies through disclosures in PubMed.",
+      "tags": ["data analysis"]
     },
     {
       "url": "https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php",
@@ -16,8 +16,15 @@
       "descriptionHtml": "We tested eight AI search tools on their ability to cite news sources accurately. This builds on our <a href=\"https://www.cjr.org/tow_center/how-chatgpt-misrepresents-publisher-content.php\" target=\"_blank\" rel=\"noopener\">previous study</a>, which examined how ChatGPT cites news sources.",
       "moreHtml": "This report has been covered by <a href=\"https://www.niemanlab.org/2025/03/ai-search-engines-fail-to-produce-accurate-citations-in-over-60-of-tests-according-to-new-tow-center-study/\" target=\"_blank\" rel=\"noopener\">Nieman Lab</a>, <a href=\"https://arstechnica.com/ai/2025/03/ai-search-engines-give-incorrect-answers-at-an-alarming-60-rate-study-says/\" target=\"_blank\" rel=\"noopener\">Ars Technica</a>, <a href=\"https://www.axios.com/newsletters/axios-login-7b9e5139-d1f2-4fcb-84ff-9002097f5489.html?chunk=0\" target=\"_blank\" rel=\"noopener\">Axios</a>, <a href=\"https://elpais.com/proyecto-tendencias/2025-04-25/citas-falsas-y-respuestas-confiadamente-incorrectas-los-chatbots-son-incapaces-de-atribuir-las-informaciones.html\" target=\"_blank\" rel=\"noopener\">El País</a>, and others.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"],
-      "wide": true,
-      "spotlight": true
+      "wide": true
+    },
+    {
+      "url": "https://www.cjr.org/tow_center/why-ai-models-are-bad-at-verifying-photos.php",
+      "image": "assets/thumb-ai-verify.png",
+      "imageAlt": "Rabbit-duck illusion diagram on a black background",
+      "title": "Why AI Models Are Bad at Verifying Photos",
+      "description": "We tested how leading AI image models perform when asked to verify the authenticity of photos.",
+      "tags": ["experiment design", "data analysis", "writing", "graphics"]
     },
     {
       "url": "https://www.cjr.org/analysis/how-ai-browsers-sneak-past-blockers-and-paywalls.php",
@@ -31,14 +38,6 @@
       "imageAlt": "Chatbot correcting a false premise in a user query",
       "title": "AI Chatbots Can Search the Web—So Why Don’t They?",
       "description": "Live search is resource-intensive and adds latency, so platforms rely on automated routing systems to decide when to deploy these tools. This routing can misfire.",
-      "tags": ["writing"]
-    },
-    {
-      "url": "https://www.cjr.org/tow_center/automating-the-boring-stuff-with-pollfinder-ai.php",
-      "image": "assets/thumb-pollfinder.png",
-      "imageAlt": "PollFinder.ai",
-      "title": "‘Automating the Boring Stuff’ with Pollfinder.ai",
-      "description": "Pollfinder.ai is a tool we are building that uses large language models (LLMs) to help polling aggregators discover, extract, and organize polling data more efficiently.",
       "tags": ["writing"]
     }
   ],

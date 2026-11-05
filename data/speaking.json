@@ -1,6 +1,13 @@
 {
   "talks": [
     {
+      "date": "October 2026",
+      "org": "Computation + Journalism Symposium",
+      "title": "How LLMs perform in breaking news scenarios.",
+      "titleUrl": "https://www.cj2026.northwestern.edu/schedule/",
+      "desc": "A look at how large language models respond as breaking news unfolds, including how they handle rapidly changing information and uncertainty."
+    },
+    {
       "date": "March 2026",
       "org": "NICAR",
       "title": "Clustering and mapping text data",
