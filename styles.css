@@ -547,6 +547,16 @@ a:hover {
   grid-auto-rows: minmax(160px, auto);
 }
 
+.section.interactives .grid-thumb {
+  flex: none;
+  aspect-ratio: 5 / 4;
+  margin-top: 0;
+}
+
+.section.interactives .grid-thumb img[src$="/thumb-platform-timeline.jpg"] {
+  object-fit: cover;
+}
+
 .section.interactives .grid-block-text {
   min-width: 0;
   overflow-wrap: break-word;

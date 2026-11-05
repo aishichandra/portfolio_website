@@ -4,7 +4,7 @@
  * Bump CACHE_VERSION when you change data/*.json so browsers fetch fresh data.
  */
 (function () {
-  var CACHE_VERSION = '7';
+  var CACHE_VERSION = '8';
   function escapeHtml(text) {
     if (!text) return '';
     var div = document.createElement('div');
@@ -71,6 +71,8 @@
       html +=
         '<a class="grid-item" href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' +
           '<div class="grid-block">' +
+            (item.image ? '<div class="grid-thumb"><img src="' + escapeHtml(item.image) +
+              '" alt="' + escapeHtml(item.imageAlt || '') + '" loading="lazy" decoding="async"></div>' : '') +
             '<div class="grid-block-text">' +
               '<h3 class="grid-item-title">' + escapeHtml(item.title) + '</h3>' +
               '<p class="grid-item-desc">' + escapeHtml(item.description) + '</p>' +

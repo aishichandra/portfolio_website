@@ -44,11 +44,15 @@
   "interactives": [
     {
       "url": "https://tow.cjr.org/ai-deals-lawsuits/",
+      "image": "assets/thumb-ai-deals.gif",
+      "imageAlt": "Animated chart of OpenAI’s lawsuits, deals, and grants involving news publishers",
       "title": "AI Deals and Disputes Tracker",
       "description": "This tracker monitors developments between news publishers and AI companies—including Lawsuits, Deals, and Grants—based on publicly available information."
     },
     {
       "url": "https://tow.cjr.org/platform-timeline/",
+      "image": "assets/thumb-platform-timeline.jpg",
+      "imageAlt": "Cover illustration for the Platforms and Publishers Timeline",
       "title": "Platforms and Publishers Timeline",
       "description": "A timeline of key developments in the relationship between technology platforms and news publishers"
     }
