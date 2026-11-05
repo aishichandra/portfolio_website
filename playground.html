@@ -6,13 +6,12 @@
   <title>sketches ++ — Aisvarya Chandrasekar</title>
   <meta name="description" content="An assortment of projects from the past and things I'm trying out.">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=1">
+  <link rel="stylesheet" href="styles.css?v=22">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body class="play-page">
-  <canvas class="doodle-canvas" id="doodle-canvas" aria-hidden="true"></canvas>
   <div class="page">
     <header class="header">
       <nav class="nav">
@@ -142,7 +141,7 @@
         <header class="section-header">
           <h2 class="section-title">Tiny Golu</h2>
         </header>
-        <p class="playground-intro">Navaratri is my favorite time of year. We celebrate the festival with a tradition called <a href="https://en.wikipedia.org/wiki/Golu_%28festival%29">Golu</a>, where we display dolls of characters from Hindu mythology on tiered platforms. Every year, I create new pieces for my Golu, trying news ways to tell these stories.</p>
+        <p class="playground-intro">Navaratri is my favorite time of year. We celebrate the festival with a tradition called <a href="https://en.wikipedia.org/wiki/Golu_%28festival%29">Golu</a>, where we display dolls of characters from Hindu mythology on tiered platforms. Every year, I create new pieces for my Golu, telling familiar stories through different mediums.</p>
         <div class="playground-grid playground-grid--compact playground-grid--golu">
           <article class="playground-card playground-card--image">
             <a href="https://aishichandra.github.io/golu2023/" class="playground-card-link-wrap" target="_blank" rel="noopener noreferrer">
@@ -279,6 +278,16 @@
         <div class="knitting-timeline">
           <div class="knitting-timeline-track">
             <div class="knitting-timeline-item">
+              <div class="knitting-timeline-image"><img src="assets/playground/knitting/may-6-2026.jpg" alt="Small blue and green bag with a long strap and a red bow" loading="lazy"></div>
+              <p class="knitting-timeline-date">May 6, 2026</p>
+              <p class="knitting-timeline-caption">a small blue and green bag to go with the previous set</p>
+            </div>
+            <div class="knitting-timeline-item">
+              <div class="knitting-timeline-image"><img src="assets/playground/knitting/may-5-2026.jpg" alt="Matching blue and green hat and vest with red trim" loading="lazy"></div>
+              <p class="knitting-timeline-date">May 5, 2026</p>
+              <p class="knitting-timeline-caption">a matching hat and vest with red trim for my newborn niece</p>
+            </div>
+            <div class="knitting-timeline-item">
               <div class="knitting-timeline-image"><img src="assets/playground/knitting/Mar%201%202026.jpg" alt="Knitting"></div>
               <p class="knitting-timeline-date">Mar 1, 2026</p>
               <p class="knitting-timeline-caption">three coin pouches- each with a different stitch pattern</p>
@@ -390,144 +399,5 @@
     })();
   </script>
 
-  <script>
-    (function () {
-      var canvas = document.getElementById('doodle-canvas');
-      if (!canvas) return;
-      if (window.matchMedia && window.matchMedia('(max-width: 800px), (hover: none), (pointer: coarse)').matches) return;
-      var ctx = canvas.getContext('2d');
-      if (!ctx) return;
-
-      var drawing = false;
-      var lastX = 0;
-      var lastY = 0;
-      var activePointerId = null;
-      var pending = false;
-      var startX = 0;
-      var startY = 0;
-      var startTarget = null;
-      var prevW = 0;
-      var prevH = 0;
-      var prevDpr = 0;
-
-      function isInteractiveTarget(target) {
-        if (!target || !(target instanceof Element)) return false;
-        return Boolean(target.closest(
-          'a, button, input, textarea, select, summary, details, iframe, video, [role="button"], .playground-card-link-wrap, .talk-link'
-        ));
-      }
-
-      function isTextTarget(target) {
-        if (!target || !(target instanceof Element)) return false;
-        return Boolean(target.closest(
-          'p, h1, h2, h3, h4, h5, h6, li, blockquote, figcaption, em, strong, span'
-        ));
-      }
-
-      function resize() {
-        var dpr = window.devicePixelRatio || 1;
-        var doc = document.documentElement;
-        var w = Math.max(doc.scrollWidth, window.innerWidth);
-        var h = Math.max(doc.scrollHeight, window.innerHeight);
-        var nextW = Math.floor(w * dpr);
-        var nextH = Math.floor(h * dpr);
-
-        // Only grow (or change DPR) to avoid wiping drawings while scrolling.
-        if (nextW <= prevW && nextH <= prevH && dpr === prevDpr) {
-          canvas.style.width = w + 'px';
-          canvas.style.height = h + 'px';
-          return;
-        }
-
-        var snapshot = null;
-        if (prevW && prevH) {
-          snapshot = document.createElement('canvas');
-          snapshot.width = prevW;
-          snapshot.height = prevH;
-          var sctx = snapshot.getContext('2d');
-          if (sctx) sctx.drawImage(canvas, 0, 0);
-        }
-
-        canvas.width = nextW;
-        canvas.height = nextH;
-        canvas.style.width = w + 'px';
-        canvas.style.height = h + 'px';
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        ctx.lineCap = 'round';
-        ctx.lineJoin = 'round';
-        ctx.strokeStyle = 'rgba(10, 10, 10, 0.65)';
-        ctx.lineWidth = 2.4;
-
-        if (snapshot) {
-          ctx.setTransform(1, 0, 0, 1, 0, 0);
-          ctx.drawImage(snapshot, 0, 0);
-          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        }
-
-        prevW = nextW;
-        prevH = nextH;
-        prevDpr = dpr;
-      }
-
-      function start(e) {
-        if (e.pointerType && e.pointerType !== 'mouse' && e.pointerType !== 'pen') return;
-        if (isInteractiveTarget(e.target)) return;
-        if (isTextTarget(e.target)) return; // allow text highlight/selection
-        pending = true;
-        activePointerId = e.pointerId;
-        startX = e.pageX;
-        startY = e.pageY;
-        startTarget = e.target;
-        lastX = e.pageX;
-        lastY = e.pageY;
-      }
-
-      function move(e) {
-        if (activePointerId !== null && e.pointerId !== activePointerId) return;
-
-        if (!drawing) {
-          if (!pending) return;
-          // Don't steal normal drags unless user moves a bit on non-text areas
-          var dx = e.pageX - startX;
-          var dy = e.pageY - startY;
-          var dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 6) return;
-          if (isInteractiveTarget(startTarget) || isTextTarget(startTarget)) {
-            pending = false;
-            return;
-          }
-          drawing = true;
-          pending = false;
-          document.body.classList.add('doodle-drawing');
-        }
-
-        if (activePointerId !== null && e.pointerId !== activePointerId) return;
-        e.preventDefault();
-        ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
-        ctx.lineTo(e.pageX, e.pageY);
-        ctx.stroke();
-        lastX = e.pageX;
-        lastY = e.pageY;
-      }
-
-      function end(e) {
-        if (activePointerId !== null && e && e.pointerId !== activePointerId) return;
-        drawing = false;
-        pending = false;
-        activePointerId = null;
-        startTarget = null;
-        document.body.classList.remove('doodle-drawing');
-      }
-
-      document.addEventListener('pointerdown', start, { capture: true });
-      window.addEventListener('pointermove', move, { passive: false });
-      window.addEventListener('pointerup', end);
-      window.addEventListener('pointercancel', end);
-
-      window.addEventListener('resize', resize);
-      resize();
-    })();
-  </script>
 </body>
 </html>

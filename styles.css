@@ -42,31 +42,12 @@ body {
     linear-gradient(to bottom, rgba(10, 10, 10, 0.045) 1px, transparent 1px);
   background-size: 28px 28px;
   background-attachment: fixed;
-  cursor: url("assets/cursor-crayon.svg") 3 29, auto;
 }
 
 .play-page a,
 .play-page button,
 .play-page [role="button"] {
   cursor: pointer;
-}
-
-/* Disable text selection while doodling so strokes in margins don't highlight text */
-body.play-page.doodle-drawing {
-  user-select: none;
-  -webkit-user-select: none;
-}
-body.play-page.doodle-drawing * {
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.doodle-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  pointer-events: none;
 }
 
 .play-page .page {
@@ -80,7 +61,7 @@ body.play-page.doodle-drawing * {
   }
 }
 
-/* Disable play-page doodles/cursor on small screens/touch */
+/* Simplify the Sketches background on small screens and touch devices */
 @media (max-width: 800px), (hover: none), (pointer: coarse) {
   .play-page {
     background-image: none;
@@ -91,10 +72,6 @@ body.play-page.doodle-drawing * {
   .play-page button,
   .play-page [role="button"] {
     cursor: pointer;
-  }
-
-  .doodle-canvas {
-    display: none;
   }
 }
 
