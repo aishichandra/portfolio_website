@@ -1968,3 +1968,131 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+[data-photo-gallery] {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+}
+
+[data-photo-gallery] > .greece-gallery-item {
+  grid-column: span var(--photo-span, 2);
+  min-width: 0;
+}
+
+[data-photo-gallery].golu-row--two > .greece-gallery-item {
+  grid-column: span var(--photo-span, 3);
+}
+
+.photo-layout-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  margin-top: 0.35rem;
+}
+
+.photo-layout-controls[hidden] {
+  display: none;
+}
+
+.photo-layout-controls button {
+  touch-action: none;
+}
+
+.photo-layout-editing img {
+  cursor: grab;
+  touch-action: none;
+}
+
+.photo-layout-editing img:active {
+  cursor: grabbing;
+}
+
+.photo-resize {
+  cursor: ew-resize;
+}
+
+@media (max-width: 600px) {
+  [data-photo-gallery] > .greece-gallery-item,
+  [data-photo-gallery].golu-row--two > .greece-gallery-item {
+    grid-column: span var(--photo-span, 6);
+  }
+}
+
+.golu-project #golu-edit {
+  margin-top: 0.75rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #c6b5af;
+  background: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.golu-project .playground-gallery-desc--spaced {
+  border-top: 1px solid #d5d5d5;
+  padding-top: 0.75rem;
+  margin: 1.25rem 0 0;
+}
+
+.golu-finished {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.golu-finished [data-photo-gallery] {
+  display: contents;
+}
+
+.golu-finished .golu-row--two[data-photo-gallery] > .greece-gallery-item {
+  grid-column: span var(--photo-span, 3);
+}
+
+.golu-project-video {
+  grid-area: 1 / 4 / auto / span 3;
+  min-width: 0;
+  margin: 0;
+}
+
+.golu-project-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  background: #161313;
+}
+
+.golu-project-captioned {
+  margin: 0;
+}
+
+.golu-project-video figcaption,
+.golu-project-captioned figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.golu-project .golu-row {
+  gap: 1rem;
+}
+
+.golu-project .greece-gallery-item img,
+.golu-project-video video {
+  box-sizing: border-box;
+  border: 1px solid #c6b5af;
+  object-fit: cover;
+}
+
+.golu-project .golu-row--two[data-photo-gallery] img {
+  aspect-ratio: 1;
+}
+
+.golu-project [data-photo-gallery="progress-v2"] img {
+  aspect-ratio: 4 / 3;
+}
+
+.golu-project .golu-row--two[data-photo-gallery] .golu-photo-wide img {
+  aspect-ratio: auto;
+}
