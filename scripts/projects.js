@@ -45,9 +45,13 @@
           '</a>';
       }
       var desc = item.descriptionHtml || (item.description ? escapeHtml(item.description) : '');
-      var more = item.moreHtml
-        ? '<p class="grid-item-more">' + item.moreHtml + '</p>'
-        : (item.more ? '<p class="grid-item-more">' + escapeHtml(item.more) + '</p>' : '');
+      var moreContent = item.moreHtml || (item.more ? escapeHtml(item.more) : '');
+      var more = moreContent
+        ? '<p class="grid-item-more grid-item-more--desktop">' + moreContent + '</p>' +
+          '<details class="grid-item-more grid-item-more--mobile">' +
+            '<summary>Press coverage</summary><p>' + moreContent + '</p>' +
+          '</details>'
+        : '';
       var linksBlock = renderTalkLinks(item.links);
       html +=
         '<div class="grid-item' + wideClass + '">' +

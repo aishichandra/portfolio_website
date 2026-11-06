@@ -6,7 +6,7 @@
   <title>sketches ++ — Aisvarya Chandrasekar</title>
   <meta name="description" content="An assortment of projects from the past and things I'm trying out.">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=23">
+  <link rel="stylesheet" href="styles.css?v=32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
@@ -141,7 +141,7 @@
         <header class="section-header">
           <h2 class="section-title">Tiny Golu</h2>
         </header>
-        <p class="playground-intro">Navaratri is my favorite time of year. We celebrate the festival with a tradition called <a href="https://en.wikipedia.org/wiki/Golu_%28festival%29">Golu</a>, where we display dolls of characters from Hindu mythology on tiered platforms. Every year, I create new pieces for my Golu, telling familiar stories through different mediums.</p>
+        <p class="playground-intro">Navaratri is my favorite time of year. We celebrate the festival with a tradition called <a href="https://en.wikipedia.org/wiki/Golu_%28festival%29">Golu</a>, where we display dolls of characters from Hindu mythology on tiered platforms. Every year, I create new pieces for my Golu, retelling familiar stories through different mediums.</p>
         <div class="playground-grid playground-grid--compact playground-grid--golu">
           <article class="playground-card playground-card--image">
             <a href="https://aishichandra.github.io/golu2023/" class="playground-card-link-wrap" target="_blank" rel="noopener noreferrer">
@@ -190,7 +190,33 @@
         <header class="section-header">
           <h2 class="section-title">Misc. Projects</h2>
         </header>
-        <div class="playground-grid playground-grid--compact playground-grid--misc">
+        <div id="misc-projects" class="playground-grid playground-grid--misc" tabindex="0" role="region" aria-label="Miscellaneous projects">
+          <article class="playground-card playground-card--image">
+            <a href="visualizing-complexity.html" class="playground-card-link-wrap">
+              <div class="playground-card-image">
+                <img src="assets/playground/complexity/board.jpg" alt="The Seis Años chalkboard game" loading="lazy">
+              </div>
+              <div class="playground-card-body">
+                <h3 class="playground-card-title">Visualizing Complexity Workshop</h3>
+                <p class="playground-card-desc">Aug 2026</p>
+                <p class="playground-card-desc">A board game about cartel recruitment and arrests, designed at the Complexity Science Hub in Vienna.</p>
+              </div>
+            </a>
+          </article>
+          <article class="playground-card playground-card--image" id="pollfinder-card" role="button" tabindex="0" aria-label="Play Pollfinder Explainer video">
+            <div class="playground-card-link-wrap">
+              <div class="playground-card-image">
+                <img src="assets/playground/Pollfinder%20Explainer%20GIF%20from%20ezgif.gif" alt="Pollfinder Explainer video thumbnail">
+              </div>
+              <div class="playground-card-body">
+                <h3 class="playground-card-title">Pollfinder Explainer</h3>
+                <p class="playground-card-desc">Mar 25, 2025</p>
+              </div>
+            </div>
+            <div class="playground-card-body playground-card-body--secondary">
+              <p class="playground-card-desc">This is a video explaining what our Magic Grant project, Pollfinder, is. The illustrations were drawn and animated on Procreate (in one night) and the video was edited with Descript.</p>
+            </div>
+          </article>
           <article class="playground-card playground-card--image">
             <a href="https://aishichandra.github.io/make_a_kolam/" target="_blank" rel="noopener noreferrer" class="playground-card-link-wrap">
               <div class="playground-card-image">
@@ -228,20 +254,6 @@
                 <p class="playground-card-desc">Syllabus for my summer seminar on interactive data visualization.</p>
               </div>
             </a>
-          </article>
-          <article class="playground-card playground-card--image" id="pollfinder-card" role="button" tabindex="0" aria-label="Play Pollfinder Explainer video">
-            <div class="playground-card-link-wrap">
-              <div class="playground-card-image">
-                <img src="assets/playground/Pollfinder%20Explainer%20GIF%20from%20ezgif.gif" alt="Pollfinder Explainer video thumbnail">
-              </div>
-              <div class="playground-card-body">
-                <h3 class="playground-card-title">Pollfinder Explainer</h3>
-                <p class="playground-card-desc">Mar 25, 2025</p>
-              </div>
-            </div>
-            <div class="playground-card-body playground-card-body--secondary">
-              <p class="playground-card-desc">This is a video explaining what our Magic Grant project, Pollfinder, is. The illustrations were drawn and animated on Procreate (in one night) and the video was edited with Descript.</p>
-            </div>
           </article>
         </div>
       </section>
@@ -399,5 +411,49 @@
     })();
   </script>
 
+  <script>
+    document.querySelectorAll('.playground-grid--misc, .project-carousel, .photo-carousel, .knitting-timeline').forEach((row) => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'misc-scroll';
+      row.before(wrapper);
+      wrapper.append(row);
+      const title = wrapper.closest('section').querySelector('h2').textContent;
+      row.tabIndex = 0;
+      row.setAttribute('role', 'region');
+      row.setAttribute('aria-label', title);
+
+      function addArrow(direction, label) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'misc-arrow misc-arrow--' + direction;
+        button.setAttribute('aria-label', 'Scroll ' + title + ' ' + label);
+        button.innerHTML = '<svg viewBox="0 0 32 24" width="32" height="24" aria-hidden="true"><path d="M3 13 Q14 10 28 12 M20 4 Q24 8 28 12 Q24 15 19 21"/></svg>';
+        button.addEventListener('click', () => {
+          const track = row.matches('.playground-grid--misc') ? row : row.firstElementChild;
+          const cardWidth = track.firstElementChild.getBoundingClientRect().width;
+          const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+          const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+          row.scrollBy({ left: (direction === 'prev' ? -1 : 1) * (cardWidth + gap), behavior });
+        });
+        return button;
+      }
+
+      const previous = addArrow('prev', 'left');
+      const next = addArrow('next', 'right');
+      wrapper.prepend(previous);
+      wrapper.append(next);
+
+      function updateArrows() {
+        previous.disabled = row.scrollLeft <= 1;
+        next.disabled = row.scrollLeft + row.clientWidth >= row.scrollWidth - 1;
+      }
+
+      row.addEventListener('scroll', updateArrows, { passive: true });
+      const observer = new ResizeObserver(updateArrows);
+      observer.observe(row);
+      if (!row.matches('.playground-grid--misc')) observer.observe(row.firstElementChild);
+      updateArrows();
+    });
+  </script>
 </body>
 </html>

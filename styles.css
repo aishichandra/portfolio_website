@@ -1,4 +1,5 @@
 /* Reset */
+button { text-align: center; }
 *, *::before, *::after { box-sizing: border-box; }
 
 /* Helvetica Neue – local font (view via http to see fonts; file:// may block them) */
@@ -474,10 +475,6 @@ a:hover {
   }
 }
 
-#selected-work-grid .grid-item--wide .grid-item-title {
-  font-size: 1.375rem;
-}
-
 @media (max-width: 800px) {
   #selected-work-grid .grid-item--wide .grid-thumb {
     flex: none;
@@ -690,6 +687,20 @@ a:hover {
   transition: color 0.2s ease;
 }
 
+.grid-item-more--mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .grid-item-more--desktop {
+    display: none;
+  }
+
+  .grid-item-more--mobile {
+    display: block;
+  }
+}
+
 .grid-item:hover .grid-item-more {
   color: #333;
 }
@@ -811,7 +822,11 @@ a:hover {
 }
 
 .grid-item-tags .tag {
-  padding: 0.15em 0.4em;
+  display: inline-grid;
+  place-items: center;
+  text-align: center;
+  line-height: 1.4;
+  padding: calc(0.15em + 1px) 0.4em 0.15em;
   background: transparent;
   color: #666;
   border: 1px solid #ddd;
@@ -1179,15 +1194,22 @@ a:hover {
 }
 
 .talk-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-size: 0.8rem;
   font-weight: 500;
-  padding: 0.25rem 0.6rem;
+  padding: calc(0.25rem + 1px) 0.6rem 0.25rem;
   border-radius: 0;
   border: 1px solid #ddd;
   color: #444;
   text-decoration: none;
   transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.talk-link:not(.talk-link--icon) {
+  min-height: 2rem;
 }
 
 .talk-link--icon {
@@ -1248,7 +1270,7 @@ a:hover {
 
   .talk-link {
     font-size: 0.75rem;
-    padding: 0.2rem 0.5rem;
+    padding: calc(0.2rem + 1px) 0.5rem 0.2rem;
   }
 }
 
@@ -1286,9 +1308,17 @@ a:hover {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.playground-grid--misc {
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 64em;
+.playground-grid.playground-grid--misc {
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(13rem, 26%, 18rem);
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x proximity;
+}
+
+.playground-grid--misc > .playground-card {
+  scroll-snap-align: start;
 }
 
 .playground-card--embed {
@@ -1397,7 +1427,7 @@ a:hover {
 }
 
 .section--misc .playground-card-body + .playground-card-body--secondary {
-  margin-top: -0.55rem;
+  margin-top: -0.65rem;
 }
 
 .playground-card {
@@ -1472,6 +1502,7 @@ a:hover {
 }
 
 .playground-card-body--secondary {
+  margin-top: -0.75rem;
   padding-top: 0;
   padding-bottom: 1rem;
 }
@@ -1551,10 +1582,6 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .playground-grid--misc {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .playground-grid--golu {
     grid-template-columns: 1fr;
   }
@@ -1562,10 +1589,6 @@ a:hover {
 
 @media (max-width: 500px) {
   .playground-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .playground-grid--misc {
     grid-template-columns: 1fr;
   }
 }
@@ -2072,4 +2095,67 @@ a:hover {
 
 .golu-project .golu-row--two[data-photo-gallery] .golu-photo-wide img {
   aspect-ratio: auto;
+}
+
+.misc-scroll {
+  --arrow-width: 1.625rem;
+  --arrow-gap: 0.375rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.misc-arrow {
+  display: grid;
+  place-items: center;
+  min-height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.misc-arrow svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.misc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--arrow-width);
+  z-index: 1;
+}
+
+.misc-arrow svg {
+  max-width: 100%;
+}
+
+.misc-arrow--prev {
+  right: calc(100% + var(--arrow-gap));
+}
+
+.misc-arrow--next {
+  left: calc(100% + var(--arrow-gap));
+}
+
+.misc-arrow--prev svg {
+  transform: scaleX(-1);
+}
+
+.misc-arrow:disabled {
+  visibility: hidden;
+}
+
+
+@media (max-width: 600px) {
+  .misc-scroll {
+    --arrow-width: 1rem;
+    --arrow-gap: 0.25rem;
+  }
 }
