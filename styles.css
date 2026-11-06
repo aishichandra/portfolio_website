@@ -1283,7 +1283,7 @@ a:hover {
 }
 
 .playground-grid--golu {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .playground-grid--misc {
