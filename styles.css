@@ -51,30 +51,6 @@ body {
   cursor: pointer;
 }
 
-/* Margin doodle — full bird sketch sheet */
-.margin-doodle {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.42;
-}
-
-@media (max-width: 1300px) {
-  .margin-doodle { display: none; }
-}
-
-.margin-doodle--1 {
-  width: 280px;
-  top: 200px;
-  left: calc(50% + 570px);
-  transform: rotate(4deg);
-}
-
-.margin-doodle--1 img {
-  width: 100%;
-  display: block;
-}
-
 .play-page .page {
   position: relative;
   z-index: 1;
