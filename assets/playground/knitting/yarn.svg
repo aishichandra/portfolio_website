@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" preserveAspectRatio="none">
+  <defs>
+    <path id="strand" d="M-2 20 C12 20 13 34 27 33 C41 32 43 7 32 7 C20 7 23 26 37 27 C48 28 53 20 66 20"/>
+  </defs>
+  <g fill="none" stroke-linecap="round">
+    <use href="#strand" stroke="#843d53" stroke-width="3.5"/>
+    <use href="#strand" stroke="#dc92a5" stroke-width="1.4" stroke-dasharray="1 2.5"/>
+  </g>
+</svg>

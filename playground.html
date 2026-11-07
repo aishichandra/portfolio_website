@@ -6,19 +6,22 @@
   <title>side quests — Aisvarya Chandrasekar</title>
   <meta name="description" content="An assortment of projects from the past and things I'm trying out.">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css?v=32">
+  <link rel="stylesheet" href="styles.css?v=37">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body class="play-page">
+  <div class="margin-doodle margin-doodle--1" aria-hidden="true">
+    <img src="assets/playground/sketches.png" alt="">
+  </div>
   <div class="page">
     <header class="header">
       <nav class="nav">
         <a href="index.html">Home</a>
       </nav>
       <div class="header-inner">
-        <h1 class="name"><a href="index.html">Aisvarya Chandrasekar</a></h1>
+        <h1 class="name">side quests</h1>
         <p class="header-blurb">An assortment of projects from the past, and things I'm trying out right now.</p>
         <div class="header-icons" aria-label="Social links">
           <a class="header-icon" href="https://www.instagram.com/aishi.chandra" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -414,7 +417,8 @@
   <script>
     document.querySelectorAll('.playground-grid--misc, .project-carousel, .photo-carousel, .knitting-timeline').forEach((row) => {
       const wrapper = document.createElement('div');
-      wrapper.className = 'misc-scroll';
+      const isKnitting = row.matches('.knitting-timeline');
+      wrapper.className = isKnitting ? 'misc-scroll knitting-scroll' : 'misc-scroll';
       row.before(wrapper);
       wrapper.append(row);
       const title = wrapper.closest('section').querySelector('h2').textContent;
@@ -428,6 +432,9 @@
         button.className = 'misc-arrow misc-arrow--' + direction;
         button.setAttribute('aria-label', 'Scroll ' + title + ' ' + label);
         button.innerHTML = '<svg viewBox="0 0 32 24" width="32" height="24" aria-hidden="true"><path d="M3 13 Q14 10 28 12 M20 4 Q24 8 28 12 Q24 15 19 21"/></svg>';
+        if (isKnitting) {
+          button.innerHTML = '<svg viewBox="0 0 40 24" preserveAspectRatio="none" width="40" height="24" aria-hidden="true"><path d="M0 12 C8 12 9 5 16 6 S21 12 35 12" stroke-width="3.5"/><path d="M0 12 C8 12 9 5 16 6 S21 12 35 12" stroke="#dc92a5" stroke-dasharray="1 2.5"/><path d="M27 5 L35 12 L27 19" stroke-width="3"/></svg>';
+        }
         button.addEventListener('click', () => {
           const track = row.matches('.playground-grid--misc') ? row : row.firstElementChild;
           const cardWidth = track.firstElementChild.getBoundingClientRect().width;

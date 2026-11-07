@@ -51,6 +51,30 @@ body {
   cursor: pointer;
 }
 
+/* Margin doodle — full bird sketch sheet */
+.margin-doodle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.42;
+}
+
+@media (max-width: 1300px) {
+  .margin-doodle { display: none; }
+}
+
+.margin-doodle--1 {
+  width: 280px;
+  top: 200px;
+  left: calc(50% + 570px);
+  transform: rotate(4deg);
+}
+
+.margin-doodle--1 img {
+  width: 100%;
+  display: block;
+}
+
 .play-page .page {
   position: relative;
   z-index: 1;
@@ -1746,14 +1770,35 @@ a:hover {
 
 .knitting-timeline-track {
   display: inline-flex;
-  gap: 1.5rem;
+  gap: 3rem;
   min-width: 100%;
+  isolation: isolate;
 }
 
 .knitting-timeline-item {
+  position: relative;
   flex: 0 0 200px;
   display: flex;
   flex-direction: column;
+}
+
+.knitting-timeline-item + .knitting-timeline-item::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 80px;
+  inset-inline-end: calc(100% - 8px);
+  width: calc(3rem + 16px);
+  height: 40px;
+  background: url("assets/playground/knitting/yarn.svg?v=2") center / 100% 100% no-repeat;
+}
+
+.knitting-timeline-item:nth-child(3n)::before {
+  background-image: url("assets/playground/knitting/yarn-wave.svg?v=2");
+}
+
+.knitting-timeline-item:nth-child(3n + 1)::before {
+  transform: scaleY(-1);
 }
 
 .knitting-timeline-image {
@@ -2158,4 +2203,22 @@ a:hover {
     --arrow-width: 1rem;
     --arrow-gap: 0.25rem;
   }
+}
+
+.knitting-scroll .misc-arrow {
+  top: calc(1rem + 100px);
+  width: calc(var(--arrow-width) + var(--arrow-gap));
+  color: #843d53;
+}
+
+.knitting-scroll .misc-arrow--prev {
+  right: 100%;
+}
+
+.knitting-scroll .misc-arrow--next {
+  left: 100%;
+}
+
+.knitting-scroll .misc-arrow svg {
+  width: 100%;
 }
