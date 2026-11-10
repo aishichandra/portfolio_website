@@ -2233,7 +2233,7 @@ a:hover {
   .sketch-marginalia {
     display: block;
     position: absolute;
-    inset: 0;
+    inset: clamp(10rem, 35vh, 22rem) 0 0;
     pointer-events: none;
   }
 
