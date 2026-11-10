@@ -2237,38 +2237,76 @@ a:hover {
     pointer-events: none;
   }
 
-  .sketch-marginalia img {
+  .sketch-marginalia > * {
+    margin: 0;
     position: absolute;
     width: clamp(248px, calc((100vw - 1100px) / 2 - 72px), 450px);
     height: 15%;
+  }
+
+  .sketch-marginalia img {
     object-fit: contain;
     object-position: center top;
     opacity: .9;
     mix-blend-mode: multiply;
   }
 
-  .sketch-marginalia img:nth-child(1),
-  .sketch-marginalia img:nth-child(2),
-  .sketch-marginalia img:nth-child(4),
-  .sketch-marginalia img:nth-child(7),
-  .sketch-marginalia img:nth-child(9),
-  .sketch-marginalia img:nth-child(11) { right: calc(100% + 54px); }
+  .sketch-marginalia img[src*="/camera.png"] {
+    opacity: 1;
+    filter: brightness(0);
+  }
 
-  .sketch-marginalia img:nth-child(3),
-  .sketch-marginalia img:nth-child(5),
-  .sketch-marginalia img:nth-child(6),
-  .sketch-marginalia img:nth-child(8),
-  .sketch-marginalia img:nth-child(10) { left: calc(100% + 54px); }
+  .sketch-marginalia figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35rem;
+  }
 
-  .sketch-marginalia img:nth-child(1) { top: 18%; transform: rotate(-5deg); }
-  .sketch-marginalia img:nth-child(2) { top: 1%; transform: rotate(3deg); }
-  .sketch-marginalia img:nth-child(3) { top: 1%; transform: rotate(-4deg); }
-  .sketch-marginalia img:nth-child(4) { top: 52%; transform: rotate(-3deg); }
-  .sketch-marginalia img:nth-child(5) { top: 39%; transform: rotate(5deg); }
-  .sketch-marginalia img:nth-child(6) { top: 78%; transform: rotate(-3deg); }
-  .sketch-marginalia img:nth-child(7) { top: 68%; transform: rotate(4deg); }
-  .sketch-marginalia img:nth-child(8) { top: 18%; transform: rotate(4deg); }
-  .sketch-marginalia img:nth-child(9) { top: 35%; transform: rotate(-5deg); }
-  .sketch-marginalia img:nth-child(10) { top: 57%; transform: rotate(3deg); }
-  .sketch-marginalia img:nth-child(11) { top: 82%; transform: rotate(-4deg); }
+  .sketch-marginalia figure img {
+    min-height: 0;
+    width: 100%;
+    object-position: center bottom;
+  }
+
+  .sketch-marginalia figcaption {
+    max-width: 24ch;
+    font: 500 1.0625rem/1.2 Caveat, cursive;
+    text-align: center;
+    pointer-events: auto;
+  }
+
+  .sketch-marginalia img[src*="/bookshelf.png"] + figcaption {
+    margin-top: -30%;
+  }
+
+  .sketch-marginalia figcaption a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .sketch-marginalia > :nth-child(1),
+  .sketch-marginalia > :nth-child(2),
+  .sketch-marginalia > :nth-child(4),
+  .sketch-marginalia > :nth-child(7),
+  .sketch-marginalia > :nth-child(9),
+  .sketch-marginalia > :nth-child(11) { right: calc(100% + 54px); }
+
+  .sketch-marginalia > :nth-child(3),
+  .sketch-marginalia > :nth-child(5),
+  .sketch-marginalia > :nth-child(6),
+  .sketch-marginalia > :nth-child(8),
+  .sketch-marginalia > :nth-child(10) { left: calc(100% + 54px); }
+
+  .sketch-marginalia > :nth-child(1) { top: 18%; transform: rotate(-5deg); }
+  .sketch-marginalia > :nth-child(2) { top: 1%; transform: rotate(3deg); }
+  .sketch-marginalia > :nth-child(3) { top: 4%; transform: rotate(-4deg); }
+  .sketch-marginalia > :nth-child(4) { top: 51%; transform: rotate(-3deg); }
+  .sketch-marginalia > :nth-child(5) { top: 42%; transform: rotate(5deg); }
+  .sketch-marginalia > :nth-child(6) { top: 84%; transform: rotate(-3deg); }
+  .sketch-marginalia > :nth-child(7) { top: 73%; transform: rotate(4deg); }
+  .sketch-marginalia > :nth-child(8) { top: 23%; transform: rotate(4deg); }
+  .sketch-marginalia > :nth-child(9) { top: 35%; transform: rotate(-5deg); }
+  .sketch-marginalia > :nth-child(10) { top: 63%; transform: rotate(3deg); }
+  .sketch-marginalia > :nth-child(11) { top: 89%; height: 11%; transform: rotate(-4deg); }
 }
