@@ -2276,8 +2276,57 @@ a:hover {
     pointer-events: auto;
   }
 
-  .sketch-marginalia img[src*="/bookshelf.png"] + figcaption {
+  .sketch-marginalia .doodle-guitar {
+    flex-direction: row;
+  }
+
+  .doodle-guitar img {
+    max-width: 54%;
+    max-height: 100%;
+  }
+
+  .doodle-guitar figcaption {
+    flex: 1;
+    text-align: left;
+    rotate: 7deg;
+  }
+
+  .doodle-bookshelf figcaption {
     margin-top: -30%;
+    font-size: .875rem;
+    transform: translateY(-1.75rem);
+    rotate: -4deg;
+  }
+
+  .doodle-kolam figcaption {
+    position: relative;
+    align-self: end;
+    text-align: right;
+    font-size: 1rem;
+    rotate: -8deg;
+  }
+
+  .kolam-caption-arrow {
+    position: absolute;
+    right: .35rem;
+    bottom: 100%;
+    width: 2.75rem;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .doodle-camera figcaption {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 7.2rem;
+    font-size: .875rem;
+    rotate: 2deg;
+  }
+
+  .doodle-camera figcaption svg {
+    display: block;
+    width: 100%;
   }
 
   .sketch-marginalia figcaption a {
