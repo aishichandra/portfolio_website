@@ -2349,7 +2349,14 @@ a:hover {
 
   .sketch-marginalia > :nth-child(1) { top: 18%; transform: rotate(-5deg); }
   .sketch-marginalia > :nth-child(2) { top: 1%; transform: rotate(3deg); }
-  .sketch-marginalia > :nth-child(3) { top: 4%; transform: rotate(-4deg); }
+  .sketch-marginalia > :nth-child(3) {
+    top: 3%;
+    left: calc(100% + 24px);
+    width: min(550px, max(288px, calc((100vw - 1100px) / 2 - 32px)));
+    height: 20%;
+    object-view-box: inset(0 30% 0 0);
+    transform: rotate(-4deg);
+  }
   .sketch-marginalia > :nth-child(4) { top: 51%; transform: rotate(-3deg); }
   .sketch-marginalia > :nth-child(5) { top: 42%; transform: rotate(5deg); }
   .sketch-marginalia > :nth-child(6) { top: 84%; transform: rotate(-3deg); }
