@@ -43,12 +43,21 @@ body {
     linear-gradient(to bottom, rgba(10, 10, 10, 0.045) 1px, transparent 1px);
   background-size: 28px 28px;
   background-attachment: fixed;
+  cursor: url("assets/cursor-crayon.svg?v=2") 5 27, auto;
 }
 
 .play-page a,
 .play-page button,
 .play-page [role="button"] {
   cursor: pointer;
+}
+
+.doodle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .play-page .page {
@@ -70,6 +79,10 @@ body {
 
 /* Simplify the Sketches background on small screens and touch devices */
 @media (max-width: 800px), (hover: none), (pointer: coarse) {
+  .doodle-canvas {
+    display: none;
+  }
+
   .play-page {
     background-image: none;
     cursor: auto;
@@ -2417,12 +2430,12 @@ a:hover {
     object-view-box: inset(0 30% 0 0);
     transform: rotate(-4deg);
   }
-  .sketch-marginalia > :nth-child(4) { top: 51%; transform: rotate(-3deg); }
+  .sketch-marginalia > .doodle-guitar { top: 51%; transform: rotate(-3deg); }
   .sketch-marginalia > :nth-child(5) { top: 42%; transform: rotate(5deg); }
   .sketch-marginalia > :nth-child(6) { top: 84%; transform: rotate(-3deg); }
   .sketch-marginalia > :nth-child(7) { top: 73%; transform: rotate(4deg); }
-  .sketch-marginalia > :nth-child(8) { top: 23%; transform: rotate(4deg); }
+  .sketch-marginalia > .doodle-kolam { top: 25%; transform: rotate(4deg); }
   .sketch-marginalia > :nth-child(9) { top: 35%; transform: rotate(-5deg); }
-  .sketch-marginalia > :nth-child(10) { top: 63%; transform: rotate(3deg); }
+  .sketch-marginalia > .doodle-window { top: 69%; transform: rotate(3deg); }
   .sketch-marginalia > :nth-child(11) { top: 89%; height: 11%; transform: rotate(-4deg); }
 }
