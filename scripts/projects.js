@@ -4,7 +4,7 @@
  * Bump CACHE_VERSION when you change data/*.json so browsers fetch fresh data.
  */
 (function () {
-  var CACHE_VERSION = '13';
+  var CACHE_VERSION = '14';
   function escapeHtml(text) {
     if (!text) return '';
     var div = document.createElement('div');
