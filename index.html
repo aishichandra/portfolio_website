@@ -6,12 +6,12 @@
   <title>Aisvarya Chandrasekar</title>
   <meta name="description" content="Aisvarya Chandrasekar is a computational journalist at the Tow Center for Digital Journalism, studying AI tools in journalism. PollFinder.ai, Tow Center, Columbia Journalism Review.">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="preload" href="data/projects.json?v=8" as="fetch">
-  <link rel="preload" href="data/speaking.json?v=8" as="fetch">
+  <link rel="preload" href="data/projects.json?v=12" as="fetch">
+  <link rel="preload" href="data/speaking.json?v=12" as="fetch">
   <link rel="preload" href="fonts/HelveticaNeueRoman.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="assets/thumb-red-bull.jpg" as="image">
   <link rel="preload" href="assets/SVG/Asset%202.svg" as="image">
-  <link rel="stylesheet" href="styles.css?v=25">
+  <link rel="stylesheet" href="styles.css?v=28">
 </head>
 <body class="home-page">
   <div class="page">
@@ -44,9 +44,8 @@
 
     <main class="main">
       <section class="section">
-        <header class="section-header section-header--kicker-tight">
+        <header class="section-header">
           <h2 class="section-title">Select Work</h2>
-          <p class="section-kicker"><a href="https://www.cjr.org/author/aisvarya-chandrasekar" target="_blank" rel="noopener">Read more →</a></p>
         </header>
         <div id="selected-work-grid" class="grid" aria-busy="true" aria-live="polite">
           <!-- First card in HTML for fast LCP on mobile (rest filled by scripts/projects.js) -->
@@ -59,8 +58,45 @@
                 <h3 class="grid-item-title">
                   <a href="https://www.theexamination.org/articles/red-bull-alcohol-research-methodology" target="_blank" rel="noopener">How AI helped us uncover Red Bull’s influence on energy drink research</a>
                 </h3>
-                <p class="grid-item-desc">We used a large language model to trace financial ties between researchers and energy drink companies through disclosures in PubMed.</p>
+                <p class="grid-item-desc">We used a large language model to trace financial ties between researchers and energy drink companies through disclosures in PubMed. The analysis supported <a href="https://www.theexamination.org/articles/red-bull-funded-research-energy-drinks-alcohol" target="_blank" rel="noopener">The Examination’s investigation</a> into Red Bull-funded research on energy drinks and alcohol.</p>
                 <p class="grid-item-tags"><span class="tag">data analysis</span></p>
+              </div>
+            </div>
+          </div>
+          <div id="bylines-card" class="grid-item">
+            <div class="grid-block">
+              <h3 id="bylines-title" class="grid-item-title">More Stories</h3>
+              <div class="bylines-scroll" role="region" aria-labelledby="bylines-title" tabindex="0">
+                <ul class="bylines-list" role="list">
+                  <li>
+                    <a href="https://www.cjr.org/tow_center/who-wins-who-sues-who-pays-the-price-tow-ai-deals-tracker-lawsuits-complex-geographic-inequities.php" target="_blank" rel="noopener">Who Wins, Who Sues, Who Pays the Price</a>
+                    <time datetime="2026-10-29">Oct 29, 2026</time>
+                  </li>
+                  <li>
+                    <a href="https://www.cjr.org/tow_center/ai-agents-are-coming-for-news-can-publishers-reclaim-control.php" target="_blank" rel="noopener">AI Agents Are Coming for News. Can Publishers Reclaim Control?</a>
+                    <time datetime="2026-05-14">May 14, 2026</time>
+                  </li>
+                  <li>
+                    <a href="https://www.cjr.org/tow_center/chatbots-memory-remember-users-conversations-history-openai-sam-altman-llm-gemini.php" target="_blank" rel="noopener">Your Chatbot’s Memory of You Can Shape the Information You See</a>
+                    <time datetime="2026-04-09">Apr 9, 2026</time>
+                  </li>
+                  <li>
+                    <a href="https://www.cjr.org/tow_center/ai-versus-accuracy-willing-trade-off-northwester-gain-cnti-studies.php" target="_blank" rel="noopener">AI Versus Accuracy? We’re Willing to Make the Trade-Off.</a>
+                    <time datetime="2026-02-26">Feb 26, 2026</time>
+                  </li>
+                  <li>
+                    <a href="https://www.cjr.org/tow_center/ai-chatbots-can-search-the-web-so-why-dont-they.php" target="_blank" rel="noopener">AI Chatbots Can Search the Web—So Why Don’t They?</a>
+                    <time datetime="2026-01-27">Jan 27, 2026</time>
+                  </li>
+                  <li>
+                    <a href="https://www.cjr.org/analysis/journalists-need-their-own-benchmark-tests-for-ai-tools.php" target="_blank" rel="noopener">Journalists Need Their Own Benchmark Tests for AI Tools</a>
+                    <time datetime="2025-09-18">Sep 18, 2025</time>
+                  </li>
+                  <li>
+                    <a href="https://www.cjr.org/tow_center/automating-the-boring-stuff-with-pollfinder-ai.php" target="_blank" rel="noopener">‘Automating the Boring Stuff’ with Pollfinder.ai</a>
+                    <time datetime="2025-06-19">Jun 19, 2025</time>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -154,6 +190,6 @@
       <p class="footer-copy">© 2026</p>
     </footer>
   </div>
-  <script src="scripts/projects.js?v=9" defer></script>
+  <script src="scripts/projects.js?v=13" defer></script>
 </body>
 </html>

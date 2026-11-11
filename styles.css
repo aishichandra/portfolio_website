@@ -498,6 +498,66 @@ a:hover {
   min-height: 0;
 }
 
+#bylines-card .grid-block {
+  gap: 0.625rem;
+  min-width: 0;
+}
+
+#bylines-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bylines-scroll {
+  max-height: 16rem;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+}
+
+@media (min-width: 501px) {
+  .bylines-scroll {
+    flex: 1 0 16rem;
+    max-height: none;
+    contain: size;
+  }
+}
+
+.bylines-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0.625rem 0 0;
+}
+
+.bylines-list li {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.625rem 0;
+  border-top: 1px solid #e8e8e8;
+}
+
+.bylines-list a {
+  color: inherit;
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+}
+
+.bylines-list a:hover,
+.bylines-list a:focus-visible {
+  text-decoration: underline;
+}
+
+.bylines-list time {
+  color: #666;
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 #interactives-grid {
   min-height: 200px;
 }

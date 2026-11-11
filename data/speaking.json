@@ -5,7 +5,7 @@
       "org": "Computation + Journalism Symposium",
       "title": "How LLMs perform in breaking news scenarios.",
       "titleUrl": "https://www.cj2026.northwestern.edu/schedule/",
-      "desc": "A look at how large language models respond as breaking news unfolds, including how they handle rapidly changing information and uncertainty."
+      "desc": "We presented our research setup and initial observations on how LLMs respond to breaking news."
     },
     {
       "date": "March 2026",

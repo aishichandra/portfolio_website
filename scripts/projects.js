@@ -4,7 +4,7 @@
  * Bump CACHE_VERSION when you change data/*.json so browsers fetch fresh data.
  */
 (function () {
-  var CACHE_VERSION = '8';
+  var CACHE_VERSION = '12';
   function escapeHtml(text) {
     if (!text) return '';
     var div = document.createElement('div');
@@ -192,7 +192,8 @@
         if (selectedEl && data.selectedWork && data.selectedWork.length > 0) {
           var rest = data.selectedWork.slice(1);
           if (rest.length > 0) {
-            selectedEl.insertAdjacentHTML('beforeend', renderSelectedWork(rest));
+            var bylinesCard = selectedEl.querySelector('#bylines-card');
+            bylinesCard.insertAdjacentHTML('beforebegin', renderSelectedWork(rest));
           }
           selectedEl.removeAttribute('aria-busy');
         }
@@ -202,7 +203,7 @@
       })
       .catch(function () {
         if (selectedEl) {
-          selectedEl.innerHTML = '<p>Could not load projects. Check <code>data/projects.json</code>.</p>';
+          selectedEl.insertAdjacentHTML('beforeend', '<p>Could not load projects. Check <code>data/projects.json</code>.</p>');
           selectedEl.removeAttribute('aria-busy');
         }
       });

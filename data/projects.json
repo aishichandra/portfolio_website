@@ -5,7 +5,7 @@
       "image": "assets/thumb-red-bull.jpg",
       "imageAlt": "Illustration for The Examination’s investigation into Red Bull’s ties to energy drink research",
       "title": "How AI helped us uncover Red Bull’s influence on energy drink research",
-      "description": "We used a large language model to trace financial ties between researchers and energy drink companies through disclosures in PubMed.",
+      "descriptionHtml": "We used a large language model to trace financial ties between researchers and energy drink companies through disclosures in PubMed. The analysis supported <a href=\"https://www.theexamination.org/articles/red-bull-funded-research-energy-drinks-alcohol\" target=\"_blank\" rel=\"noopener\">The Examination’s investigation</a> into Red Bull-funded research on energy drinks and alcohol.",
       "tags": ["data analysis"]
     },
     {
@@ -32,13 +32,6 @@
       "imageAlt": "ChatGPT Atlas logo on a phone screen",
       "title": "How AI Browsers Sneak Past Blockers and Paywalls",
       "descriptionHtml": "Agents mimic standard Chrome sessions, making them indistinguishable from regular human traffic and invisible to crawler-blocking tools. This report was covered by <a href=\"https://gizmodo.com/chatgpts-browser-bot-seems-to-avoid-new-york-times-links-like-a-rat-who-got-electrocuted-2000680444\" target=\"_blank\" rel=\"noopener\">Gizmodo</a> and others."
-},    {
-      "url": "https://www.cjr.org/tow_center/ai-chatbots-can-search-the-web-so-why-dont-they.php",
-      "image": "assets/thumb-chatbots.png",
-      "imageAlt": "Chatbot correcting a false premise in a user query",
-      "title": "AI Chatbots Can Search the Web—So Why Don’t They?",
-      "description": "Live search is resource-intensive and adds latency, so platforms rely on automated routing systems to decide when to deploy these tools. This routing can misfire.",
-      "tags": ["writing"]
     }
   ],
   "interactives": [
