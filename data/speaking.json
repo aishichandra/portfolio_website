@@ -5,7 +5,10 @@
       "org": "Computation + Journalism Symposium",
       "title": "How LLMs perform in breaking news scenarios.",
       "titleUrl": "https://www.cj2026.northwestern.edu/schedule/",
-      "desc": "We presented our research setup and initial observations on how LLMs respond to breaking news."
+      "desc": "We presented our research setup and initial observations on how LLMs respond to breaking news.",
+      "links": [
+        { "label": "Slides", "url": "assets/cj-2026-slides.pdf" }
+      ]
     },
     {
       "date": "March 2026",
