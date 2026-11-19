@@ -5,49 +5,56 @@
       "image": "assets/thumb-red-bull.jpg",
       "imageAlt": "Illustration for The Examination’s investigation into Red Bull’s ties to energy drink research",
       "title": "How AI helped us uncover Red Bull’s influence on energy drink research",
-      "descriptionHtml": "We used a large language model to trace financial ties between researchers and energy drink companies through disclosures in PubMed. The analysis supported <a href=\"https://www.theexamination.org/articles/red-bull-funded-research-energy-drinks-alcohol\" target=\"_blank\" rel=\"noopener\">The Examination’s investigation</a> into Red Bull-funded research on energy drinks and alcohol.",
+      "date": "July 2026",
+      "descriptionHtml": "We used an LLM to map financial ties between energy drink companies and researchers for The Examination. We verified the extracted disclosures and built a network graph to help reporters find leads.",
       "tags": ["data analysis"]
     },
     {
-      "url": "https://aishichandra.github.io/citations_study/",
+      "url": "https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php",
       "image": "assets/SVG/Asset 2.svg",
       "imageAlt": "Comparison charts of eight AI search engines' citation performance",
       "title": "AI Search Has a Citation Problem",
-      "descriptionHtml": "We tested eight AI search tools on their ability to cite news sources accurately. This builds on our <a href=\"https://www.cjr.org/tow_center/how-chatgpt-misrepresents-publisher-content.php\" target=\"_blank\" rel=\"noopener\">previous study</a>, which examined how ChatGPT cites news sources. This version was prepared for my portfolio to showcase graphics that the publishing system for the <a href=\"https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php\" target=\"_blank\" rel=\"noopener\">original Columbia Journalism Review article</a> did not support.",
+      "date": "March 2025",
+      "links": [],
+      "detailParagraphs": ["More than 60 percent of responses contained errors. The platforms often gave incorrect answers with unwarranted confidence, linked to copied or syndicated articles, or invented URLs."],
+      "relatedStudies": [
+        {
+          "title": "How LLMs perform in breaking news scenarios",
+          "status": "Ongoing",
+          "url": "assets/cj-2026-slides.pdf",
+          "label": "Presentation slides"
+        },
+        {
+          "title": "How ChatGPT misrepresents publisher content",
+          "coverageHtml": "Covered in <a href=\"https://techcrunch.com/2024/11/29/study-of-chatgpt-citations-makes-dismal-reading-for-publishers/\" target=\"_blank\" rel=\"noopener\">TechCrunch</a>, <a href=\"https://www.theverge.com/2024/12/3/24312016/chatgpt-search-results-review-inaccurate-unpredictable\" target=\"_blank\" rel=\"noopener\">The Verge</a>, and <a href=\"https://futurism.com/chatgpt-butchering-reporting-news-partners\" target=\"_blank\" rel=\"noopener\">Futurism</a>, among others.",
+          "status": "November 2024",
+          "url": "https://www.cjr.org/tow_center/how-chatgpt-misrepresents-publisher-content.php"
+        }
+      ],
+      "descriptionHtml": "As AI search tools increasingly become a way to find news, their citations shape which publishers get seen and credited. We designed the experiment to test whether these search tools could accurately identify and cite news sources.",
       "moreHtml": "This report has been covered by <a href=\"https://www.niemanlab.org/2025/03/ai-search-engines-fail-to-produce-accurate-citations-in-over-60-of-tests-according-to-new-tow-center-study/\" target=\"_blank\" rel=\"noopener\">Nieman Lab</a>, <a href=\"https://arstechnica.com/ai/2025/03/ai-search-engines-give-incorrect-answers-at-an-alarming-60-rate-study-says/\" target=\"_blank\" rel=\"noopener\">Ars Technica</a>, <a href=\"https://www.axios.com/newsletters/axios-login-7b9e5139-d1f2-4fcb-84ff-9002097f5489.html?chunk=0\" target=\"_blank\" rel=\"noopener\">Axios</a>, <a href=\"https://elpais.com/proyecto-tendencias/2025-04-25/citas-falsas-y-respuestas-confiadamente-incorrectas-los-chatbots-son-incapaces-de-atribuir-las-informaciones.html\" target=\"_blank\" rel=\"noopener\">El País</a>, and others.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"],
       "wide": true
     },
     {
       "url": "https://www.cjr.org/tow_center/why-ai-models-are-bad-at-verifying-photos.php",
-      "image": "assets/thumb-ai-verify.png",
-      "imageAlt": "Rabbit-duck illusion diagram on a black background",
+      "image": "assets/thumb-photo-verification.png",
+      "imageAlt": "Annotated photograph of flooding in Valencia showing visual clues used by AI to infer its location",
       "title": "Why AI Models Are Bad at Verifying Photos",
-      "description": "We tested how leading AI image models perform when asked to verify the authenticity of photos.",
+      "date": "August 2025",
+      "links": [],
+      "detailParagraphs": ["We designed the experiment to test whether AI chatbots could verify news photographs and establish their provenance, and to examine how they reasoned through the task."],
+      "descriptionHtml": "People are increasingly using AI to fact-check images. But these tools can give convincing, misleading answers about whether an image is real and where it came from, contributing to the misinformation they are being asked to check.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"]
     },
-    {
-      "url": "https://www.cjr.org/analysis/how-ai-browsers-sneak-past-blockers-and-paywalls.php",
-      "image": "assets/thumb-ai-browsers.png",
-      "imageAlt": "ChatGPT Atlas logo on a phone screen",
-      "title": "How AI Browsers Sneak Past Blockers and Paywalls",
-      "descriptionHtml": "Agents mimic standard Chrome sessions, making them indistinguishable from regular human traffic and invisible to crawler-blocking tools. This report was covered by <a href=\"https://gizmodo.com/chatgpts-browser-bot-seems-to-avoid-new-york-times-links-like-a-rat-who-got-electrocuted-2000680444\" target=\"_blank\" rel=\"noopener\">Gizmodo</a> and others."
-    }
-  ],
-  "interactives": [
     {
       "url": "https://tow.cjr.org/ai-deals-lawsuits/",
       "image": "assets/thumb-ai-deals.gif",
       "imageAlt": "Animated chart of OpenAI’s lawsuits, deals, and grants involving news publishers",
       "title": "AI Deals and Disputes Tracker",
-      "description": "This tracker monitors developments between news publishers and AI companies—including Lawsuits, Deals, and Grants—based on publicly available information."
-    },
-    {
-      "url": "https://tow.cjr.org/platform-timeline/",
-      "image": "assets/thumb-platform-timeline.jpg",
-      "imageAlt": "Cover illustration for the Platforms and Publishers Timeline",
-      "title": "Platforms and Publishers Timeline",
-      "description": "A timeline of key developments in the relationship between technology platforms and news publishers"
+      "links": [],
+      "detailParagraphs": ["We designed the tracker and created its data visualizations to help readers explore overlapping relationships between publishers and AI companies. Because the tracker includes only organizations named in public documentation, its counts represent a minimum rather than a complete picture."],
+      "description": "The relationships between news publishers and AI companies are difficult to follow. A publisher can license content to one company, sue another, and receive grant funding from a third."
     }
   ]
 }

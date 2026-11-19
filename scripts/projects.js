@@ -4,7 +4,7 @@
  * Bump CACHE_VERSION when you change data/*.json so browsers fetch fresh data.
  */
 (function () {
-  var CACHE_VERSION = '15';
+  var CACHE_VERSION = '50';
   function escapeHtml(text) {
     if (!text) return '';
     var div = document.createElement('div');
@@ -46,22 +46,38 @@
       }
       var desc = item.descriptionHtml || (item.description ? escapeHtml(item.description) : '');
       var moreContent = item.moreHtml || (item.more ? escapeHtml(item.more) : '');
-      var more = moreContent
-        ? '<p class="grid-item-more grid-item-more--desktop">' + moreContent + '</p>' +
-          '<details class="grid-item-more grid-item-more--mobile">' +
-            '<summary>Press coverage</summary><p>' + moreContent + '</p>' +
-          '</details>'
-        : '';
+      var extraParagraphs = (item.detailParagraphs || []).map(function (paragraph) {
+        return '<p class="grid-item-desc">' + escapeHtml(paragraph) + '</p>';
+      }).join('');
+      var projectDetails = extraParagraphs +
+        (moreContent ? '<p class="grid-item-more">' + moreContent + '</p>' : '');
       var linksBlock = renderTalkLinks(item.links);
+      var relatedStudies = item.relatedStudies && item.relatedStudies.length
+        ? '<div class="related-studies"><p class="related-studies-label">Related research</p><ul>' +
+          item.relatedStudies.map(function (study) {
+            return '<li><span class="related-study-status">' + escapeHtml(study.status || '') + '</span>' +
+              '<div class="related-study-main">' +
+                (study.date ? '<span class="related-study-date">' + escapeHtml(study.date) + '</span>' : '') +
+                '<a href="' + escapeHtml(study.url) + '" target="_blank" rel="noopener">' +
+                  escapeHtml(study.title) + '</a>' +
+                (study.label ? '<span class="related-study-format">' + escapeHtml(study.label) + '</span>' : '') +
+              (study.coverageHtml ? '<p class="related-study-coverage">' + study.coverageHtml + '</p>' : '') +
+              '</div></li>';
+          }).join('') + '</ul></div>'
+        : '';
       html +=
         '<div class="grid-item' + wideClass + '">' +
           '<div class="grid-block">' + thumb +
             '<div class="grid-block-text">' +
+              (item.seriesTitle ? '<p class="project-series-label">' + escapeHtml(item.seriesTitle) + '</p>' : '') +
+              (item.date ? '<p class="grid-item-date">' + escapeHtml(item.date) + '</p>' : '') +
               '<h3 class="grid-item-title">' +
                 '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' + escapeHtml(item.title) + '</a>' +
               '</h3>' +
-              '<p class="grid-item-desc">' + desc + '</p>' + more +
-              renderTagsBlock(item.tags) + linksBlock +
+              '<p class="grid-item-desc">' + desc + '</p>' +
+              projectDetails +
+              (item.noteHtml ? '<p class="grid-item-desc"><small>' + item.noteHtml + '</small></p>' : '') +
+              linksBlock + relatedStudies +
             '</div>' +
           '</div>' +
         '</div>';
@@ -169,7 +185,7 @@
   }
 
   function loadProjects() {
-    var selectedEl = document.getElementById('selected-work-grid');
+    var selectedEl = document.getElementById('ai-research-grid');
     var interactivesEl = document.getElementById('interactives-grid');
     var speakingEl = document.getElementById('speaking-content');
 
@@ -192,8 +208,7 @@
         if (selectedEl && data.selectedWork && data.selectedWork.length > 0) {
           var rest = data.selectedWork.slice(1);
           if (rest.length > 0) {
-            var bylinesCard = selectedEl.querySelector('#bylines-card');
-            bylinesCard.insertAdjacentHTML('beforebegin', renderSelectedWork(rest));
+            selectedEl.insertAdjacentHTML('beforeend', renderSelectedWork(rest));
           }
           selectedEl.removeAttribute('aria-busy');
         }

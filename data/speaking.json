@@ -17,8 +17,7 @@
       "titleUrl": "https://github.com/TowCenter/llm-text-embeddings",
       "desc": "Hands-on session using large language model text embeddings to cluster and map NICAR conference sessions, and how reporters can adapt the workflow for their own text datasets.",
       "links": [
-        { "label": "Slides", "url": "assets/nicar-2026-semantic-maps-tipsheet.pdf" },
-        { "label": "GitHub", "url": "https://github.com/TowCenter/llm-text-embeddings" }
+        { "label": "Slides", "url": "assets/nicar-2026-semantic-maps-tipsheet.pdf" }
       ]
     },
     {
