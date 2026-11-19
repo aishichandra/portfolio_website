@@ -42,7 +42,7 @@
       "title": "Why AI Models Are Bad at Verifying Photos",
       "date": "August 2025",
       "links": [],
-      "descriptionHtml": "People are increasingly using AI to fact-check images. But these tools can give convincing, misleading answers about whether an image is real and where it came from, contributing to the misinformation. We tested whether AI chatbots could verify news photographs and establish their provenance, and examined how they reasoned through the task.",
+      "descriptionHtml": "People are increasingly using AI to fact-check images. But these tools can give convincing, misleading answers about whether an image is real and where it came from, contributing to misinformation. We tested whether AI chatbots could verify news photographs and establish their provenance, and examined how they reasoned through the task.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"]
     },
     {
@@ -51,7 +51,7 @@
       "imageAlt": "Animated chart of OpenAI’s lawsuits, deals, and grants involving news publishers",
       "title": "AI Deals and Disputes Tracker",
       "links": [],
-      "description": "The relationships between news publishers and AI companies could be difficult to follow. A publisher can license content to one company, sue another, and receive grant funding from a third. We designed a tracker and created visualizations to help readers explore the various relationships between publishers and AI companies."
+      "description": "The relationships between news publishers and AI companies can be hard to follow. A publisher can license content to one company, sue another, and receive grant funding from a third. We designed a tracker and created visualizations to help readers explore the various relationships between publishers and AI companies."
     }
   ]
 }

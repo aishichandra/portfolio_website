@@ -4,7 +4,7 @@
  * Bump CACHE_VERSION when you change data/*.json so browsers fetch fresh data.
  */
 (function () {
-  var CACHE_VERSION = '59';
+  var CACHE_VERSION = '60';
   function escapeHtml(text) {
     if (!text) return '';
     var div = document.createElement('div');
@@ -164,9 +164,9 @@
         return '<li class="talk-item"><div class="talk-date-col">' + escapeHtml(t.date) + '</div>' + mainBlock + '</li>';
       }).join('');
       html += '<details class="talk-more-details">' +
-        '<summary class="talk-see-more">See more</summary>' +
+        '<summary class="talk-see-more">More talks &amp; presentations</summary>' +
         '<div class="talk-more"><ul class="talk-list">' + moreList + '</ul>' +
-        '<div class="talk-less-wrap"><button type="button" class="talk-see-less" aria-label="Collapse">See less</button></div></div>' +
+        '<div class="talk-less-wrap"><button type="button" class="talk-see-less" aria-label="Show fewer talks and presentations">Fewer talks</button></div></div>' +
         '</details>';
     }
     return html;

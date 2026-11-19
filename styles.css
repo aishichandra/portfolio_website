@@ -2562,13 +2562,6 @@ a:hover {
 .home-page .bike-trail-image {
   position: relative;
 }
-.home-page .bike-trail-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.85));
-  pointer-events: none;
-}
 
 .home-page .header-icon {
   border: 0;
@@ -2946,4 +2939,8 @@ a:hover {
 
 .home-page .section-header:has(.reporting-intro) {
   margin-bottom: 2rem;
+}
+
+.home-page #selected-work-grid .bike-trail-image img {
+  object-fit: cover;
 }
