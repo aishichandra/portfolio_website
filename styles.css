@@ -2944,3 +2944,7 @@ a:hover {
 .home-page #selected-work-grid .bike-trail-image img {
   object-fit: cover;
 }
+
+.home-page .section-header:has(.section-title--reporting, .section-title--speaking) {
+  margin-bottom: 2rem;
+}
