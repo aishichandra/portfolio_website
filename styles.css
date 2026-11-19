@@ -2852,7 +2852,7 @@ a:hover {
   margin-top: 0.75rem;
 }
 .home-page #ai-research-grid .grid-item-more {
-  margin-top: 1rem;
+  margin-top: 0;
   font-size: 0.75rem;
   line-height: 1.6;
   color: #777;
@@ -2912,4 +2912,38 @@ a:hover {
   font-size: 0.8125rem;
   line-height: 1.55;
   color: #777;
+}
+
+.home-page #ai-research-grid .grid-item + .grid-item,
+.home-page .additional-article + .additional-article {
+  border-top: 1px solid var(--home-rule);
+}
+.home-page .section-header:has(.series-intro, .reporting-intro) {
+  grid-template-columns: var(--home-columns);
+  column-gap: var(--home-gutter);
+}
+.home-page .section-header:has(.series-intro, .reporting-intro) .section-title {
+  grid-column: 1;
+  grid-row: 1;
+}
+.home-page .section-header :is(.series-intro, .reporting-intro) {
+  grid-column: 2;
+  grid-row: 1;
+}
+@media (max-width: 600px) {
+  .home-page .section-header:has(.series-intro, .reporting-intro) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .home-page .section-header:has(.series-intro, .reporting-intro) .section-title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .home-page .section-header :is(.series-intro, .reporting-intro) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.home-page .section-header:has(.reporting-intro) {
+  margin-bottom: 2rem;
 }

@@ -30,7 +30,7 @@
           "url": "https://www.cjr.org/tow_center/how-chatgpt-misrepresents-publisher-content.php"
         }
       ],
-      "descriptionHtml": "Can AI search tools accurately identify and cite news sources? We tested eight platforms and found errors in more than 60 percent of responses. They often gave incorrect answers with unwarranted confidence, linked to copied or syndicated articles, or invented URLs.",
+      "descriptionHtml": "We tested eight AI search tools on their ability to identify and cite news articles. We found that more than 60 percent of their responses contained errors, often delivered with unwarranted confidence. The tools misattributed reporting, linked to copied or syndicated versions, and invented URLs.",
       "moreHtml": "This report has been covered by <a href=\"https://www.niemanlab.org/2025/03/ai-search-engines-fail-to-produce-accurate-citations-in-over-60-of-tests-according-to-new-tow-center-study/\" target=\"_blank\" rel=\"noopener\">Nieman Lab</a>, <a href=\"https://arstechnica.com/ai/2025/03/ai-search-engines-give-incorrect-answers-at-an-alarming-60-rate-study-says/\" target=\"_blank\" rel=\"noopener\">Ars Technica</a>, <a href=\"https://www.axios.com/newsletters/axios-login-7b9e5139-d1f2-4fcb-84ff-9002097f5489.html?chunk=0\" target=\"_blank\" rel=\"noopener\">Axios</a>, <a href=\"https://elpais.com/proyecto-tendencias/2025-04-25/citas-falsas-y-respuestas-confiadamente-incorrectas-los-chatbots-son-incapaces-de-atribuir-las-informaciones.html\" target=\"_blank\" rel=\"noopener\">El País</a>, and others.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"],
       "wide": true
@@ -42,8 +42,7 @@
       "title": "Why AI Models Are Bad at Verifying Photos",
       "date": "August 2025",
       "links": [],
-      "detailParagraphs": ["We designed the experiment to test whether AI chatbots could verify news photographs and establish their provenance, and to examine how they reasoned through the task."],
-      "descriptionHtml": "People are increasingly using AI to fact-check images. But these tools can give convincing, misleading answers about whether an image is real and where it came from, contributing to the misinformation they are being asked to check.",
+      "descriptionHtml": "People are increasingly using AI to fact-check images. But these tools can give convincing, misleading answers about whether an image is real and where it came from, contributing to the misinformation. We tested whether AI chatbots could verify news photographs and establish their provenance, and examined how they reasoned through the task.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"]
     },
     {
@@ -52,8 +51,7 @@
       "imageAlt": "Animated chart of OpenAI’s lawsuits, deals, and grants involving news publishers",
       "title": "AI Deals and Disputes Tracker",
       "links": [],
-      "detailParagraphs": ["We designed the tracker and created its data visualizations to help readers explore overlapping relationships between publishers and AI companies. Because the tracker includes only organizations named in public documentation, its counts represent a minimum rather than a complete picture."],
-      "description": "The relationships between news publishers and AI companies are difficult to follow. A publisher can license content to one company, sue another, and receive grant funding from a third."
+      "description": "The relationships between news publishers and AI companies could be difficult to follow. A publisher can license content to one company, sue another, and receive grant funding from a third. We designed a tracker and created visualizations to help readers explore the various relationships between publishers and AI companies."
     }
   ]
 }
