@@ -16,7 +16,6 @@
       "title": "AI Search Has a Citation Problem",
       "date": "March 2025",
       "links": [],
-      "detailParagraphs": ["More than 60 percent of responses contained errors. The platforms often gave incorrect answers with unwarranted confidence, linked to copied or syndicated articles, or invented URLs."],
       "relatedStudies": [
         {
           "title": "How LLMs perform in breaking news scenarios",
@@ -31,7 +30,7 @@
           "url": "https://www.cjr.org/tow_center/how-chatgpt-misrepresents-publisher-content.php"
         }
       ],
-      "descriptionHtml": "As AI search tools increasingly become a way to find news, their citations shape which publishers get seen and credited. We designed the experiment to test whether these search tools could accurately identify and cite news sources.",
+      "descriptionHtml": "Can AI search tools accurately identify and cite news sources? We tested eight platforms and found errors in more than 60 percent of responses. They often gave incorrect answers with unwarranted confidence, linked to copied or syndicated articles, or invented URLs.",
       "moreHtml": "This report has been covered by <a href=\"https://www.niemanlab.org/2025/03/ai-search-engines-fail-to-produce-accurate-citations-in-over-60-of-tests-according-to-new-tow-center-study/\" target=\"_blank\" rel=\"noopener\">Nieman Lab</a>, <a href=\"https://arstechnica.com/ai/2025/03/ai-search-engines-give-incorrect-answers-at-an-alarming-60-rate-study-says/\" target=\"_blank\" rel=\"noopener\">Ars Technica</a>, <a href=\"https://www.axios.com/newsletters/axios-login-7b9e5139-d1f2-4fcb-84ff-9002097f5489.html?chunk=0\" target=\"_blank\" rel=\"noopener\">Axios</a>, <a href=\"https://elpais.com/proyecto-tendencias/2025-04-25/citas-falsas-y-respuestas-confiadamente-incorrectas-los-chatbots-son-incapaces-de-atribuir-las-informaciones.html\" target=\"_blank\" rel=\"noopener\">El País</a>, and others.",
       "tags": ["experiment design", "data analysis", "writing", "graphics"],
       "wide": true
