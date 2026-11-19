@@ -2948,3 +2948,13 @@ a:hover {
 .home-page .section-header:has(.section-title--reporting, .section-title--speaking) {
   margin-bottom: 2rem;
 }
+
+.home-page .header-blurb a {
+  color: inherit;
+  text-decoration-color: #bbb;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+.home-page .header-blurb a:hover {
+  text-decoration-color: currentColor;
+}
