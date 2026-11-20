@@ -2973,3 +2973,58 @@ a:hover {
   text-decoration-color: #bbb;
   text-underline-offset: 0.2em;
 }
+
+.home-page #classwork-first .methodology-link {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0;
+  border: 0;
+  background: transparent;
+  color: #222;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.home-page #classwork-first .methodology-link:hover {
+  background: transparent;
+  color: #555;
+}
+
+/* Quiet, consistent links with a clear hover and keyboard focus. */
+a[href] {
+  color: inherit !important;
+  text-decoration: underline !important;
+  text-decoration-color: #b5b5b5 !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.23em;
+  text-decoration-skip-ink: auto;
+}
+a[href]:hover {
+  text-decoration-color: #333 !important;
+}
+a[href]:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 4px;
+}
+a.grid-item,
+a.playground-card,
+a.playground-card-link-wrap,
+a.grid-thumb,
+a.header-icon {
+  text-decoration: none !important;
+}
+:is(a.grid-item, a.playground-card, a.playground-card-link-wrap)
+:is(.grid-item-title, .playground-card-title) {
+  text-decoration: underline !important;
+  text-decoration-color: #b5b5b5 !important;
+  text-underline-offset: 0.23em;
+  text-decoration-thickness: 1px;
+}
+:is(a.grid-item, a.playground-card, a.playground-card-link-wrap):hover
+:is(.grid-item-title, .playground-card-title) {
+  text-decoration-color: #333 !important;
+}
+
+.footer a[href="playground.html"] {
+  text-decoration: none !important;
+}
