@@ -2958,3 +2958,18 @@ a:hover {
 .home-page .header-blurb a:hover {
   text-decoration-color: currentColor;
 }
+
+.home-page #ai-research-grid .grid-item-more,
+.home-page .related-study-coverage {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #777;
+}
+.home-page #ai-research-grid .grid-item-more a,
+.home-page .related-study-coverage a {
+  color: inherit;
+  text-decoration-color: #bbb;
+  text-underline-offset: 0.2em;
+}
